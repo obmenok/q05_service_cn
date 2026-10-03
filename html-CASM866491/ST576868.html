@@ -1,0 +1,2446 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="DTC故障码列表及简单排查方法"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>DTC故障码列表及简单排查方法</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576868">DTC故障码列表及简单排查方法</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">系统级诊断（含所有由架构室管控的CAN的BUSOFF、丢失、无效等诊断；整车电源高、低压诊断；整车架构级ECU之间的硬线通信）</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>编号</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>故障码</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>含义</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>可能的原因</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>维修建议</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">1</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B256216</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ECU电池电压过低</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>蓄电池故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查蓄电池</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">2</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B256217</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ECU电池电压过高</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>蓄电池故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查蓄电池</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">3</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8088</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">(公can)BUSOFF故障</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>CAN连接断开</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查CAN线连接</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">4</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8187</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">EPS转角超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">5</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8287</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP偏航率超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">6</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8387</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VCU挡位超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">7</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8487</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP车速超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">8</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8186</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">EPS转角数据无效</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">9</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8286</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP偏航率数据无效</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">10</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8386</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VCU挡位数据无效</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">11</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8486</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP车速数据无效</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">12</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8587</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VIU超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">13</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8787</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">AD控制超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">14</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8887</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VIUOTA超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">15</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8883</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VIUOTA校验错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">16</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8882</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VIUOTA计数错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">17</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8183</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">EPS转角校验错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">18</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8182</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">EPS转角计数错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">19</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8283</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP偏航率校验错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">20</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8282</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP偏航率计数错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">21</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8383</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VCU挡位校验错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">22</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8382</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">VCU挡位计数错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">23</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8483</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP车速校验错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">24</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8482</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">ESP车速计数错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">25</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8687</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">BCM电源电压超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">26</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8C87</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">TBOX本地时间超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">27</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8D87</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">CDC总里程超时</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">28</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">U1A8087</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">时间同步异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>C3B输出错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查C3B输出信号</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p">产品级诊断（包含有产品方管控的CAN/LIN通信类诊断；内部芯片电源诊断；开关及驱动诊断；ECU内部诊断 ；控制器管脚、线路通断诊断等等）</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="20%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>编号</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>故障码</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>含义</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>可能的原因</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>维修建议</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">1</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250055</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">参数无效</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达参数没有配置</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">配置雷达参数</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">2</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250296</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">radio失效</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达控制器故障</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">3</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250396</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">bb失效</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达控制器故障</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">4</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250054</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">未标定</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达控制器未标定</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达控制器进行标定</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">5</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250097</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达致盲</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达控制器处于致盲环境</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达控制器远离致盲环境</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">6</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250076</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达位置不匹配</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达位置被调换</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">调换雷达位置</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">7</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250896</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达失调</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达偏差角超出合理范围</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">8</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250078</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">标定失败</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">安装位置误差大</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">检查安装角度</span>  
+                           <span class="ph b"></span>  
+                           <span class="ph b">雷达控制器进行标定</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">9</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251196</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">水平角标定结果超差</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">安装位置误差大</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">检查安装角度</span>  
+                           <span class="ph b"></span>  
+                           <span class="ph b">雷达控制器进行标定</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">10</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251217</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC 3V3电压偏高</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">硬件电路异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">11</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251216</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC 3V3电压偏低</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">硬件电路异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">12</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251317</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC AVDDRF电压偏高</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">硬件电路异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">13</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251316</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC AVDDRF电压偏低</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">硬件电路异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">14</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251417</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC VDDC电压偏高</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">硬件电路异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">15</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251416</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC VDDC电压偏低</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">硬件电路异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">16</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251596</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC工作温度过高</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">工作环境温度过高</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">控制器温度降低后再使用</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">17</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251796</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">看门狗错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">程序异常</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">控制器温度恢复正常后再使用</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">18</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B251996</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">PMIC工作温度超差</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">工作环境温度过高</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">控制器温度</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">19</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250096</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC芯片内部故障</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">SOC芯片内部故障</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">20</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250089</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">(私can)CAN1控制器BUSOFF故障</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">CAN总线或ECU故障</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">检查CAN总线或更换ECU。</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">21</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250057</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达软件不匹配</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">左右雷达软件版本不一致</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">更换控制器</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph i">22</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">B250056</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达下线配置错误</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">雷达没有写配置字或配置字范围不正确</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">需要进行电检的刷写配置字步骤</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

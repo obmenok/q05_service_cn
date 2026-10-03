@@ -1,0 +1,102 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="标定要求"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>标定要求</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST577110">标定要求</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">需要标定的情况：</span>  
+               
+               <ol class="num"> 
+                  
+                  <li> 
+                     
+                     <p>拆换/装发动机托架、摆臂、前支柱、前制动器（羊角）、悬架相关零部件；需要重新标定 IMU 相关信号，详细见 SRS 控制器（安 全气囊控制器）的标定方式；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>拆换/装安全气囊控制器，需要重新标定 IMU 相关信号，详细将 SRS 控制器（安全气囊控制器）的标定方式；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>拆换转向器、方向盘、转向支撑相关零部件，需要重新做四轮定位并标定 EPS 中位相关信号，详细将 EPS 中位标定方式；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>更换集成制动控制模块零部件，首先是断电排制动回路的空气，然后是需要更新 IBCU 的软件，写入加注状态、退出装配模式，再写入车型配置、轮速配置，然后进行 TMC 行程传感器标定(行程传感器标定这一步仅件号为3505200-FQ03的集成制动模块需要)，最后通过诊断仪进行干件返修加注（排IBCU内部空气），再次退出装配模式、清读故障码操作；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>在更换轮速传感器后也同时需要进行对轮速传感器进行适应性的配置。</p> 
+                     
+                  </li> 
+                  
+               </ol> 
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">工具</span>：诊断仪。
+               
+            </p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

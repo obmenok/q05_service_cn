@@ -1,0 +1,104 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="系统功能原理介绍"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>系统功能原理介绍</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576308">系统功能原理介绍</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">系统概述</span> 
+               
+            </p>  
+            
+            <p class="p">电子驻车制动系统简称EPB系统，EPB系统去掉了传统的手拉式或脚踩式驻车操纵机构，改为用一个怀挡P按钮对驻车制动器进行控制。因此对于驾驶员来说，这种新型驻车制动系统最大的优点就是操作方式方便而舒适。</p>  
+            
+            <p class="p">从控制功能角度来看，由于对驻车制动系统进行了全面电气化改造，驻车制动系统能够和其他控制系统例如电子稳定控制系统（ESC）进行联合控制，因此车辆安全性能得到大幅提升，而且制动系统范畴内多种控制功能都以电控方式来实现，这些优点是传统机械驻车操纵系统无法比拟的。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">基本控制控能</span> 
+               
+            </p>  
+            
+            <p class="p">根据车辆具体配置和工作状况，EPB系统能够实现如下功能：</p>  
+            
+            <p class="p">1. 静态夹紧、释放功能</p>  
+            
+            <p class="p">当车辆静止时，可以通过按下P档按钮实现传统意义驻车功能；车辆静止时，可以通过踩下制动踏板按下P档按钮实现驻车制动释放功能。（若不踩下制动踏板，带有文字信息显示功能的仪表会提示请踩制动踏板）。</p>  
+            
+            <p class="p">2. 辅助驶离功能（DAA）</p>  
+            
+            <p class="p">当EPB系统探测到驾驶员希望开车离开时通过此功能释放EPB驻车制动。但当车辆停在坡道上时，需要有足够的驱动扭矩此功能才起作用，目的是为了防止车辆溜坡。</p>  
+            
+            <p class="p">辅助驶离功能可以用于坡道起步和普通路面起步，尤其在坡道起步具有优势，可以避免驻车坡道起步车辆后溜问题发生。坡道起步必须满足几个前提条件：</p>  
+            
+            <p class="p">主驾系好安全带、档位在前进或倒档、踩下油门、驱动电机持续输出扭矩，EPB系统会自动解除。</p>  
+            
+            <p class="p">3. 动态减速功能（ECD）</p>  
+            
+            <p class="p">ECD功能支持驾驶员在紧急情况下通过此功能实现动态减速。（例如制动踏板与制动主缸脱落、制动助力失效等情况下）当驾驶员按下P档按钮进行减速时，ECD功能会发送减速请求（减速度 4m/s^2），同时在CAN线上发送一个有效标志。此减速请求会要求ESC系统主动建压施加车轮制动力，以达到给车辆进行减速的目的。ESC系统会在300ms内发送有效标志确认减速请求。</p>  
+            
+            <p class="p">ESC系统通过CAN线发送信号确认ECD功能是否能够响应，然后确认EPB减速请求是否被执行。</p>  
+            
+            <p class="p">当系统检测到减速使车辆静止后，减速请求会立即退出保证车辆减速的平顺性。当驾驶员通过P档按钮进行动态减速时，此命令被执行但有一项请求会中断ECD功能，即当ECD功能起作用后踩下油门踏板在此情况下ECD功能将立即被中断。</p>  
+            
+            <p class="p">如果EPB发送减速请求后，ESC系统检测不能实现ECD功能（没有反应或者减速度不能达到定义的最小值时）EPB将退回并启动RWU功能，通过电-机械在后轮实现后轮防抱死制动减速。</p>  
+            
+            <p class="p">4. 后轮防抱死制动功能（RWU）</p>  
+            
+            <p class="p">RWU功能是通过EPB系统实现“电子+机械式”动态减速功能。RWU可以体统单独后轮防抱死制动，实现后轮单独制动的车辆稳定性。此功能在行车制动系统失效情况下，若需要车辆减速持续按下P档按钮，RWU功能就会起作用。</p>  
+            
+            <p class="p">5. 维修保养功能</p>  
+            
+            <p class="p">当行驶一定里程后需要更换后制动钳摩擦块，需要通过诊断仪完成。首先通过OBD端口接入诊断仪，选择电子手刹系统进入特殊服务中的维护模式，按诊断仪提示进行操作。然后按更换卡钳摩擦片步骤进行摩擦片更换。</p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

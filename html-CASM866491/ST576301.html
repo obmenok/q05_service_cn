@@ -1,0 +1,649 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="液压控制机构总成（HCU）"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>液压控制机构总成（HCU）</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576301">液压控制机构总成（HCU）</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">系统原理图</span> 
+               
+            </p>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP339474.png" alt="P245712"></img></div>  
+            
+            <p class="p"> 
+               <span class="ph b">接插件截面图</span> 
+               
+            </p>  
+            
+            <div class="imagecenter"><img width="50%" src="image/P412258.jpg" alt="P243479"></img></div>  
+            
+            <p class="p"> 
+               <span class="ph b">端子定义（IBCU~NBC）</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">引脚</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">引脚缩写</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">功能说明</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">1</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">GND_MR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">地（电机）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">2</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB_MOT_R+</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">右驻车卡钳供电</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">3</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB_MOT_R-</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">右驻车卡钳地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">5</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN1P</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">NBC CAN总线1（高）,CHCAN</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">7</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSS_FL</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">轮速信号线（左前）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">11</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN2P</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">NBC CAN总线2（高）PCAN</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">12</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB_MOT_L-</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">左驻车卡钳地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">13</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB_MOT_L+</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">左驻车卡钳供电</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">14</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">UB_V</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">电源（阀）需60A保险</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">19</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN1M</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">NBC CAN总线1（低）,CHCAN</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">20</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSP_RR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">轮速电源线（右后）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">21</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSP_FL</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">轮速电源线（左前）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">23</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSS_RL</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">（左后）轮速传感器信号</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">25</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN2M</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">NBC CAN总线2（低）,PCAN</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">26</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSS_FR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">轮速信号线（右前）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">30</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">GND_VR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">地(阀）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">36</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WAU_IN1</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">ECU唤醒(IG唤醒信号)需5A保险</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">37</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSS_RR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">轮速信号线（右后）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">38</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">BFLS</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">液位报警器线束可配置为常开型或常闭型；默认为常闭型、即默认液位低时液位传感器开路，ECU检测到的信号被拉高注：液位传感器信号另一端就近接地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">39</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSP_RL</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">轮速电源线（左后）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">42</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">WSP_FR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">轮速电源线（右前）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">46</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">UB_M</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">电源（电机）</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">端子定义（IBCU）</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" class="greenCell" valign="&#xA;            top&#xA;          ">引脚</td>  
+                     
+                     <td width="33.33333333333333%" class="greenCell" valign="&#xA;            top&#xA;          ">引脚缩写</td>  
+                     
+                     <td width="33.33333333333333%" class="greenCell" valign="&#xA;            top&#xA;          ">功能说明</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">1</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">GND_1</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">阀、ESC_ECU地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">2</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">MOT-R-A</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">右卡钳电机正极</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">3</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">MOT-R-B</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">右卡钳电机负极</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">4</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RR-SIG</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RR轮速传感器供电</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">5</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RR-ASR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RR轮速传感器接地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">6</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FL-SIG</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FL轮速传感器供电</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">7</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FL-ASR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FL轮速传感器接地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">8</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RL-SIG</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RL轮速传感器供电</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">9</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RL-ASR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">RL轮速传感器接地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">10</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FR-SIG</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FR轮速传感器供电</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">11</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FR-ASR</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">FR轮速传感器接地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">12</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">MOT-L-B</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">左卡钳电机负极</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">13</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">MOT-L-A</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">左卡钳电机正极</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">14</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">KL30-1</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">阀、ESC_ECU供电</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">16</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">BFLS-SIG+</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">液位传感器+</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">24</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-SW4</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-SW4（EPB开关，平台预留）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">25</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-SW3</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-SW3（EPB开关，平台预留）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">27</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-SW1</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-SW1（EPB开关，平台预留）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">28</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN2-L</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN2低</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">29</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN2-H</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN2高</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">30</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">GND_2</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">电机、Nbrake_ECU地</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">32</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN1-L</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN1低</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">33</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN1-H</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">CAN1高</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">34</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">BFLS-SIG-</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">液位传感器-</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">35</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-LED</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB开关LED灯（EPB开关，平台预留）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">39</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">ISOK</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">K线1(MOD)</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">41</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">IGN</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">点火开关_KL15</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">43</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB_SW6</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">EPB-SW6（EPB开关，平台预留）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">45</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">ISOK_2</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">K线2（ACT）</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">46</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">KL30-2</td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          ">电机、Nbrake_ECU供电</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

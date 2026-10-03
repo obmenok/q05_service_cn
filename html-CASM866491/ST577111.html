@@ -1,0 +1,226 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="标定方法"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>标定方法</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST577111">标定方法</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">将车辆水平、静止停放，诊断仪接上车辆OBD 接口，车辆上电后，开启诊断仪。</p>  
+            
+            <ol class="num"> 
+               
+               <li> 
+                  
+                  <p>正确连接诊断仪和车辆OBD接口，车辆上电。</p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>写入车型配置码与轮速配置码。</p>  
+                  
+                  <ul name="contents" class="ul"> 
+                     
+                     <li> 
+                        
+                        <p>确定需要写入的车型配置码与轮速配置码，各车型对应的配置码如表所示；</p>  
+                        
+                        
+                        <table width="100%" border="1" frame="box" rules="all">  
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           <tbody> 
+                              
+                              <tr> 
+                                 
+                                 <td width="4.714285714285714%" valign="&#xA;            top&#xA;          ">车型简称</td>  
+                                 
+                                 <td width="16.57142857142857%" valign="&#xA;            top&#xA;          ">LEV0</td>  
+                                 
+                                 <td width="16%" valign="&#xA;            top&#xA;          ">LEV1</td>  
+                                 
+                                 <td width="11%" valign="&#xA;            top&#xA;          ">LEV2</td>  
+                                 
+                                 <td width="17.142857142857142%" valign="&#xA;            top&#xA;          ">LEV3</td>  
+                                 
+                                 <td width="17.857142857142858%" valign="&#xA;            top&#xA;          ">LEV4</td>  
+                                 
+                                 <td width="16.71428571428571%" valign="&#xA;            top&#xA;          ">LEV5</td> 
+                                 
+                              </tr>  
+                              
+                              <tr> 
+                                 
+                                 <td width="4.714285714285714%" valign="&#xA;            top&#xA;          ">车型号</td>  
+                                 
+                                 <td width="16.57142857142857%" valign="&#xA;            top&#xA;          ">SC6440AAAABEV</td>  
+                                 
+                                 <td width="16%" valign="&#xA;            top&#xA;          ">SC6440AAAABEV</td>  
+                                 
+                                 <td width="11%" valign="&#xA;            top&#xA;          ">SC6440AAAABEV,SC6440AAABBEV</td>  
+                                 
+                                 <td width="17.142857142857142%" valign="&#xA;            top&#xA;          ">SC6440AAAABEV,SC6440AAABBEV</td>  
+                                 
+                                 <td width="17.857142857142858%" valign="&#xA;            top&#xA;          ">SC6440AAABBEV</td>  
+                                 
+                                 <td width="16.71428571428571%" valign="&#xA;            top&#xA;          ">SC6440AAABBEV</td> 
+                                 
+                              </tr>  
+                              
+                              <tr> 
+                                 
+                                 <td width="4.714285714285714%" valign="&#xA;            top&#xA;          ">状态号</td>  
+                                 
+                                 <td width="16.57142857142857%" valign="&#xA;            top&#xA;          ">CNH0001</td>  
+                                 
+                                 <td width="16%" valign="&#xA;            top&#xA;          ">CNH1001,CNH1002</td>  
+                                 
+                                 <td width="11%" valign="&#xA;            top&#xA;          ">CNH2001,CNH2002,CNH2003,CNH2004,CNH2501,CNH2502</td>  
+                                 
+                                 <td width="17.142857142857142%" valign="&#xA;            top&#xA;          ">CNH3001,CNH3002,CNH3003,CNH3502,CNH3501</td>  
+                                 
+                                 <td width="17.857142857142858%" valign="&#xA;            top&#xA;          ">CNH4001,CNH4002,CNH4003,CNH4004</td>  
+                                 
+                                 <td width="16.71428571428571%" valign="&#xA;            top&#xA;          ">CNH5001,CNH5002,CNH5003</td> 
+                                 
+                              </tr>  
+                              
+                              <tr> 
+                                 
+                                 <td width="4.714285714285714%" valign="&#xA;            top&#xA;          ">车型变量</td>  
+                                 
+                                 <td width="16.57142857142857%" valign="&#xA;            top&#xA;          ">01</td>  
+                                 
+                                 <td width="16%" valign="&#xA;            top&#xA;          ">01</td>  
+                                 
+                                 <td width="11%" valign="&#xA;            top&#xA;          ">02</td>  
+                                 
+                                 <td width="17.142857142857142%" valign="&#xA;            top&#xA;          ">03</td>  
+                                 
+                                 <td width="17.857142857142858%" valign="&#xA;            top&#xA;          ">04</td>  
+                                 
+                                 <td width="16.71428571428571%" valign="&#xA;            top&#xA;          ">05</td> 
+                                 
+                              </tr> 
+                              
+                           </tbody> 
+                           
+                        </table> 
+                        
+                        
+                     </li>  
+                     
+                     <li> 
+                        
+                        <p>写入车型配置码的路径：诊断仪&gt;汽车诊断&gt;IBCU集成制动控制模块&gt;诊断数据版本&gt;特殊功能&gt;手动写入车型配置码，配置码要写全，如 “01”输入01，不能只写1。路径如图所示。写入轮速类型路径：诊断仪&gt;汽车诊断&gt;IBCU集成制动控制模块&gt;诊断数据版本&gt;特殊功能&gt;功能配置&gt;前/后轮速类型</p> 
+                        
+                     </li>  
+                     
+                     <li> 
+                        
+                        <p>在正确成功写入车型配置码与轮速配置码之后，逐步后退操作界面至“电子手刹集成EPBi”的选择界面，等待仪表上不再提示驻车故障，大概需要10s。</p> 
+                        
+                     </li> 
+                     
+                  </ul>
+                  
+                  
+               </li>  
+               
+               <li>TMC行程传感器标定 （这一步仅3505200-FQ03需要） 
+                  
+                  <p>将汽车停放于水平地面上，保证制动踏板处于未踩下状态</p>TMC行程传感器标定，标定路径：诊断仪&gt;汽车诊断&gt;IBCU集成制动控制模块&gt;特殊功能&gt;启动TMC行程传感器标定，点击启动例程，显示操作成功TMC行程传感器标定完成，如下图
+                  
+                  <div class="imagecenterlevel1"><img width="50%" src="image/MP433412.jpg" alt="MP365682"></img></div> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>确定无故障码和故障灯显示。</p>  
+                  
+                  <ol class="num"> 
+                     
+                     <li> 
+                        
+                        <p>查看是否还有故障码，如果有，清除当前故障码，刷新再查看。</p> 
+                        
+                     </li>  
+                     
+                     <li> 
+                        
+                        <p>检查仪表板上是否还有IBCU系统相关的故障灯显示。</p> 
+                        
+                     </li> 
+                     
+                  </ol>  
+                  
+                  <p>备注：</p>  
+                  
+                  <p>1.如果是更换IBCU执行机构总成零部件，且更换的IBCU执行机构总成是干式件,则需要进行加注液排气；湿式件则不需要此步骤。</p>  
+                  
+                  <p>2.标定时，整车4轮定位参数是否正确，车辆停放在水平地面。</p>  
+                  
+                  <p>3.用手持诊断仪，严格按诊断仪上的说明进行标定。</p> 
+                  
+               </li> 
+               
+            </ol> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

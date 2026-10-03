@@ -1,0 +1,95 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="标定失败原因及排查"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="TT577109"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>标定失败原因及排查</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="TT577109">
+         
+         
+         
+         <h3 class="title topictitle1" title="TT577109">标定失败原因及排查</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">EPS标定前整车状态确认</span> 
+               
+            </p>  
+            
+            <p class="p">1.确认整车上电，仪表显示整车信息。</p>  
+            
+            <p class="p">2. 检查整车电压，满足9V-16V。</p>  
+            
+            <p class="p">3. 确认诊断仪OBD插头正常连接整车OBD口。</p>  
+            
+            <p class="p">4. 确认网关无故障，可正常转发诊断报文。</p>  
+            
+            <p class="p">5. 确认线束连接ECU端、OBD端、网关端针脚定义无问题，接插件连接正常（无插接到不位，针脚歪针、退针现象）。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">标定失败原因及排查</span> 
+               
+            </p>  
+            
+            <p class="p">EPS如果标定失败可能原因如下，需逐一进行排查：</p>  
+            
+            <p class="p">1、EPS标定前整车状态需检查确认。</p>  
+            
+            <p class="p">2、标定前，确认车辆及方向盘摆正；标定过程中，不能转动方向盘。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">标定小技巧</span> 
+               
+            </p>  
+            
+            <p class="p">1、如果整车需要做四轮定位，则在完成四轮定位后，立即进行EPS角度中位标定。</p>  
+            
+            <p class="p">2、如果整车不做四轮定位，可以先在平直道路上直行过程中，摆正车身及方向盘后，通过诊断仪读取EPS角度传感器实时角度，并记下该角度；停车后，通过诊断仪实时读取EPS实时角度，把方向盘转到该角度后进行角度中位标定。</p>  
+            
+            <p class="p">3、最后再在平直道路上试驾，确认车辆走直时，诊断仪读取的角度中位标定值是否接近0（出厂标准0±2°）。</p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

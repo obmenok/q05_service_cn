@@ -1,0 +1,90 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="系统功能原理介绍"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="ST576483"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>系统功能原理介绍</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="ST576483">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576483">系统功能原理介绍</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">自动雨刮</span> 
+               
+            </p>  
+            
+            <p class="p">前提：整车上电，雨刮模式设置为【auto】，且雨量环境光传感器无故障。</p>  
+            
+            <p class="p">雨量环境光传感器根据外界雨量的变化，输出相应雨刮刮刷请求输入给左前区域控制器,左前区域控制器控制雨刮动作，从而实现雨刮的自动刮刷。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">自动灯光</span> 
+               
+            </p>  
+            
+            <p class="p">前提：整车上电，且灯光模式设置为【auto】，且雨量环境光传感器无故障。</p>  
+            
+            <ol class="num"> 
+               
+               <li> 
+                  
+                  <p>近光、位置灯在以下情况立即点亮：雨量环境光传感器输出的灯光开关请求信号状态为打开。</p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>近光、位置灯在以下情况熄灭：雨量环境光传感器输出的灯光开关请求信号状态为关闭。</p> 
+                  
+               </li> 
+               
+            </ol> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

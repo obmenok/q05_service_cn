@@ -1,0 +1,4937 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="车道辅助系统控制器"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>车道辅助系统控制器</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST656713">车道辅助系统控制器</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">DTC故障码列表及简单排查方法</span> 
+               
+            </p>  
+            
+            <p class="p">工具：诊断仪KT710、万用表</p>  
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr></tr> 
+                  
+               </tbody> 
+               
+            </table>  
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               <tbody> 
+                  
+                  <tr></tr> 
+                  
+               </tbody> 
+               
+            </table>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr align="left" valign="middle"> 
+                     
+                     <td width="20%" align="left" valign="middle"> 
+                        
+                        <p> 
+                           <span class="ph b">故障码</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" align="left" valign="middle"> 
+                        
+                        <p> 
+                           <span class="ph b">含义</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" align="left" valign="middle"> 
+                        
+                        <p> 
+                           <span class="ph b">触发条件</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" align="left" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">可能故障原因</span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" align="left" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b">维修步骤</span> 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220016</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS检测蓄电池电压低</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)ECU从正常电压范围变为电压过低(低于8.5v超过500ms)</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)蓄电池亏电</p>  
+                        
+                        <p>(2)电池或线路接触不良</p>  
+                        
+                        <p>(3)发电机故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）车辆点火给蓄电池充电，检查LAS线束1号引脚与5号引脚之间的电压是否在正常工作电压8.5-16.5V范围内，在范围内则更换LAS，后联系长安技术人员分析单件故障。不在范围内则进行下面步骤；</p>  
+                        
+                        <p>（2）测试整车暗电流是否超标，以判断是否为静态电流超标引起的蓄电池亏电；持续大于20mA不下降视为异常</p>  
+                        
+                        <p>（3）若是暗电流满足要求，检查发电机是否存在故障，联系充电系统负责人排查</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220117</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS检测蓄电池电压高</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)电压过高（大于等于16.5v超过500ms）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)电压调节器故障</p>  
+                        
+                        <p>(2)电池或线路接触不良</p>  
+                        
+                        <p>(3)控制器线路短路</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）车辆点火给蓄电池充电，检查LAS线束1号引脚与5号引脚之间的电压是否在正常工作电压9-16V范围内，在范围内则更换LAS，后联系长安技术人员分析单件故障。不在范围内则进行下面步骤</p>  
+                        
+                        <p>(2)检查发电机是否存在故障，联系充电系统负责人排查</p>  
+                        
+                        <p>(3)根据线束原理图，检查LAS供电线路是否存在破损，短路</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178088</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS检测私有CAN BUSOFF</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态 (4)持续总线关闭次数达5次(200ms)</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN总线(私CAN)发生短路或断路</p>  
+                        
+                        <p>(2)CAN总线(私CAN)线路的物理性质发生了变化</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查LAS线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4)检测终端电阻是否为60欧左右，如果电阻小于40或者大于70则存在异常，需要检查终端电阻控制器是否有异常</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178188</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS检测公有CAN BUSOFF</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)持续总线关闭次数达5次(200ms)</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN总线(私CAN)发生短路或断路</p>  
+                        
+                        <p>(2)CAN总线(私CAN)线路的物理性质发生了变化</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)逐个插拔保险或控制器接插件，观察故障是否消除，如果故障消除则定位到相应控制器，更换控制器，后联系长安技术人员排查控制器单体问题</p>  
+                        
+                        <p>(2) 如若插拔控制器故障没消除，逐个检查各个控制器接插件是否接触良好，端子有无退针</p>  
+                        
+                        <p>(3)检测终端电阻是否为60欧左右，如果电阻小于40或者大于70则存在异常，需要检查终端电阻控制器是否有异常</p>  
+                        
+                        <p>(4) 插拔终端电阻CAN线上所有控制器，测试终端电阻，去掉控制器恢复正常，则此控制器有故障，更换控制器后联系长安技术人员排查控制器问题</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178287</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS与SAS丢失通信</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LAS与GW_180丢失通信或DLC错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障</p>  
+                        
+                        <p>(4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178283</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>SAS_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s (5)SAS_CRCCheck failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载 (2)传输线受到电磁干扰 (3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178282</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>SAS_RollingCounter错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)SAS_RollingCounter failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载 (2)传输线受到电磁干扰 (3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178387</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS与ESP丢失通信</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LAS与GW_187/GW_206/GW_208/GW_258/GW_277/GW_278丢失通信或DLC错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障 (2)控制器线束故障，接插件松动 (3)BDC故障 (4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178386</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP DLC错误故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LAS与GW_187/GW_278丢失通信或DLC错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN线故障 (2) 接插件松动 (3) BDC故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178383</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)ESP_CRCCheck_187 / ESP_CRCCheck_206 /ESP_CRCCheck_208 /ESP_CRCCheck_258/ESP_CRCCheck_277 / ESP_CRCCheck_278 failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载 (2)传输线受到电磁干扰 (3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178382</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP_RollingCounter错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)ESP_RollingCounter_187/ESP_RollingCounter_206/ESP_RollingCounter_208/ESP_RollingCounter_258/ESP_RollingCounter_277/ESP_RollingCounter_278
+                           failure错误连续超过100ms（10倍报文周期）
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载 (2)传输线受到电磁干扰 (3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178487</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS与TCU丢失通信或DLC错误故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LAS与GW_188/GW_1A8丢失通信或DLC错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN线故障 (2)控制器线束故障，接插件松动 (3) BDC故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178483</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>TCU_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)TCU_CRCCheck_188/TCU_CRCCheck_1A8 failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178482</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>TCU_RollingCounter错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)TCU_RollingCounter_188/TCU_RollingCounter_1A8 failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178587</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS与EMS丢失通信或DLC错误故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LAS与GW_196/GW_1A6丢失通信或DLC错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3) BDC故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178583</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>EMS_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)EMS_CRCCheck_196 /EMS_CRCCheck_1A6 failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178582</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>EMS_RollingCounter错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)EMS_RollingCounter_196 / EMS_RollingCounter_1A6 failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178687</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS与EPS丢失通信</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LAS与GW_24F丢失通信或DLC错误连续超过200ms（10倍报文周期） (6)LAS与GW_17E丢失通信或DLC错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3) BDC故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178683</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>EPS_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)EPS_CRCCheck_17E failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)EPS_CRCCheck_24F failure错误连续超过200ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178682</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>EPS_RollingCounter错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)EPS_RollingCounter_17E failure错误连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)EPS_RollingCounter_24F failure错误连续超过200ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178787</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>与HU通讯丢失</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)在1000毫秒内未接收到GW_3AF/GW_3B8/GW_3BB消息（连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障</p>  
+                        
+                        <p>(4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178783</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>HU_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s HU_CRCCheck_3AF/HU_CRCCheck_3B8错误连续超过1000ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U178782</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>HU_RollingCounte错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)HU_RollingCounter_3AF / HU_RollingCounter_3B8 错误 1000毫秒 （连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179287</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>与MFS丢失通讯</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)在400毫秒内未接收到GW_28C消息（连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障</p>  
+                        
+                        <p>(4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179283</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>GW_MFS_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)GW_MFS_CRCCheck_28C错误连续超过400ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179282</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>GW_MFS_RollingCounter错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)GW_MFS_RollingCounter_28C 错误 400毫秒 （连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179387</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LCDAR报文通讯超时</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)在500毫秒内未接收到LCDAR_2A4消息（连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障 (4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179383</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LCDAR_CRCCheck错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LCDAR_CRCCheck_2AF错误连续超过500ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179382</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LCDAR_RollingCounter错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)LCDAR_RollingCounter_2AF 错误 500毫秒 （连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179487</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>与SRS丢失通讯</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)在5000毫秒内未接收到GW_50消息（连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障</p>  
+                        
+                        <p>(4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179587</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>与BCM丢失通讯</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)在1000毫秒内未接收到GW_387/3FF消息（连续10个消息周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障</p>  
+                        
+                        <p>(4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179187</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>与MRR丢失通讯(私CAN)</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)RDR_Status 错误 200毫秒</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障</p>  
+                        
+                        <p>(4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179186</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>MRR DLC故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)RDR_Status丢失通信或DLC错误连续超过200ms（5倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)CAN线故障</p>  
+                        
+                        <p>(2)控制器线束故障，接插件松动</p>  
+                        
+                        <p>(3)BDC故障</p>  
+                        
+                        <p>(4)控制器故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="9" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179183</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" rowspan="9" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>MRR(私CAN)CRC故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)RDR_Status_CRC 错误 200毫秒</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)OnComingObj0_CRC / OnComingObj1_CRC / OnComingObj2_CRC / OnComingObj3_CRC 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)ACCObjInfo_CRC 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)RDR1Header_CRC 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)TrajACC_CRC 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)TIPLCourseInfo0_CRC / TIPLCourseInfo1_CRC / TIPLCourseInfo2_CRC / TIPLCourseInfo3_CRC / TIPLCourseInfo4_CRC5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)TIPLLaneInfo0_CRC / TIPLLaneInfo1_CRC / TIPLLaneInfo2_CRC / TIPLLaneInfo3_CRC 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)TrajPointACCObj0_CRC / TrajPointACCObj1_CRC / TrajPointACCObj2_CRC / TrajPointACCObj3_CRC / TrajPointACCObj4_CRC / TrajPointACCObj5_CRC
+                           / TrajPointACCObj6_CRC / TrajPointACCObj7_CRC / TrajPointACCObj8_CRC / TrajPointACCObj9_CRC 5次信号错误
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)OnGoingObj0_CRC / OnGoingObj1_CRC 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="5" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U179182</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" rowspan="5" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>MRRRollingCounter故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)RDR_Status_BZ 错误 200毫秒(5个连续周期)</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)OnComingObj0_BZ / OnComingObj1_BZ / OnComingObj2_BZ / OnComingObj3_BZ 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)ACCObjInfo_BZ 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)RDR1Header_BZ 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-18.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)TrajACC_BZ 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)接收到的信息过载</p>  
+                        
+                        <p>(2)传输线受到电磁干扰</p>  
+                        
+                        <p>(3)CAN总线仲裁出错</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP车速无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号ESP_VehicleSpeed==0x1FFF或者ESP_VehicleSpeedValid==0x1连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障 （</p>  
+                        
+                        <p>4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP指示其轮速方向信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)由ESP发出的‘右后轮速方向’信号 == 0x3 or ‘左后轮速方向’信号 == 0x3 or ‘右前轮速方向’信号 == 0x3 or ‘左前轮速方向’信号 == 0x3 ）持续7个连续周期并且ESP_VehicleSpeed大于1kph
+                           如果EMS_EngineStatus=stop orcrank，或者从crank变成running的5s内，不监控此故障
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F3</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP指示其轮速信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)由ESP发出的‘右后轮速信号无效’信号或Wh‘左后轮速信号无效’信号或‘左前后轮速信号无效’信号或‘右前轮速信号无效’信号连续7个周期(140ms)!= 0并且车速大于1kph 如果EMS_EngineStatus=stop orcrank，或者从crank变成running的5s内，不监控此故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F4</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP指示其轮速脉冲信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)由ESP发出的‘右后轮速脉冲’信号 = 0xff 或 ‘右前轮速脉冲’信号 = 0xff 或 ‘右前轮速脉冲’信号 = 0xff 或 ‘左前轮速脉冲’信号 = 0xff持续7个连续周期(140ms)并且车速大于1kph 如果EMS_EngineStatus=stop
+                           orcrank，或者从crank变成running的5s内，不监控此故障
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F5</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>偏航率失效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号ESP_YawRateValid==0x1连续超过200ms（10倍报文周期）或者</p>  
+                        
+                        <p>(6)信号ESP_YawRate==0x3FFF连续超过200ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F6</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>主缸压力无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号ESP_MasCylBrakePressureValid==0x1 连续超过200ms（10倍报文周期）或者</p>  
+                        
+                        <p>(6)信号ESP_MasCylBrakePressure==0xFFF连续超过200ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F7</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP横向加速度信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号ESP_LatAccel==0xFF连续超过200ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F8</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP纵向加速度信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号ESP_LongAccel==0x3FF连续超过200ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1783F9</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ESP_TCSFailStatus信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号ESP_TCSFailStatus==0x1连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1785F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>发动机转速信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号EMS_EngineSpeed==0xFFFF连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1785F1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>加速踏板位置l信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号EMS_AccPedal==0xFF连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1785F2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>发动机状态信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号EMS_EngineStatus==0x3连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1784F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>换挡过程状态有效信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号TCU_ShiftinProgressValid==0x1连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1784F1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>换挡器位置无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号TCU_GearShiftPosition==0xF连续超过100ms（10倍报文周期），或者</p>  
+                        
+                        <p>(6)信号TCU_ShiftPostionValid==0x1连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1784F2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>真实档位无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号TCU_ActualGear==0xF连续超过100ms（10倍报文周期），或者</p>  
+                        
+                        <p>(6)信号TCU_ActualGearValid==0x1连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1782F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>SAS无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号SAS_SASFailure==0x1 连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1782F1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>方向盘转角无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号SAS_SteeringAngleValid==0x1连续超过100ms（10倍报文周期），或者</p>  
+                        
+                        <p>(6)信号SAS_SteeringAngle==0x7FFF连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1782F2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>SAS未校准</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号SAS_Calibrated==LastValue连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1782F4</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>方向盘转角速度无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号SAS_SteeringAngleSpeed==0xFF连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1787F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查HU_NavSpeedLimit信号无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号HU_NavSpeedLimit==0xFF连续超过1000ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1788F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>近光灯工作状态无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号BCM_LowBeamStatus==0x3连续超过400ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1788F1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>远光灯工作状态无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号BCM_HighBeamStatus==0x3连续超过400ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1788F2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>前雾灯工作状态无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号BCM_FrontFoglampStatus==0x3连续超过1000ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1786F3</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>驾驶员手力矩失效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号EPS_MeasuredTorsionBarTorque==0x7FF / EPS_MeasuredTorsionBarTorqValid==0x1连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1786F5</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>EPS响应横向控制不可用</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号EPS_LatCtrlAvailabilityStatus==0x2连续超过100ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1786F7</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>EPS_ConcussAvailabilityStatus 状态失效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s (5)信号EPS_ConcussAvailabilityStatus==0x2//EPS_ConcussAvailabilityStatus=0x3=reserved 连续超过200ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1792F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>IACC开关无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号GW_MFS_IACCenable_switch_signal==0x3连续超过400ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1792F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>GW_MFS_DiagInfoSW_28C无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号GW_MFS_DiagInfoSW_28C==0x7连续超过400ms（10倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>U1791F0</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>MRR数据无效（私CAN）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号RDR_Stat_Error==0x1续超过200ms（5倍报文周期）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) CAN总线供电电压为8.5V-16.5V</p>  
+                        
+                        <p>(2) 满足诊断要求，即低压上电3s后</p>  
+                        
+                        <p>(3) 点火开关为On状态</p>  
+                        
+                        <p>(4)无Bus off 或 Bus Off 恢复超过 1s</p>  
+                        
+                        <p>(5)信号StatusACC== 0x8/0x9 5次信号错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>（1）信号输入有误</p>  
+                        
+                        <p>（2）电磁干扰</p>  
+                        
+                        <p>（3）控制器线束故障</p>  
+                        
+                        <p>（4）节点故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关ON，用万用表检查蓄电池电压是否为8.5V-16.5V</p>  
+                        
+                        <p>(2) 车辆重新上下电，诊断仪读取故障码，确认故障是否消除</p>  
+                        
+                        <p>(3) 检查线束和接插件，确认控制器接插件是否接触良好，端子有无退针,线束是否破损、断裂</p>  
+                        
+                        <p>(4) 检查CAN总线状态：检测终端电阻是否为60欧左右，如果明显偏差为40以下或者80以上，则检查终端电阻控制器是否损坏，更换控制器后观察故障是否消除</p>  
+                        
+                        <p>(5) 检查关联控制器的功能状态</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220297</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS摄像头遮挡</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关为On状态</p>  
+                        
+                        <p>(2)检测到失去图像1800秒后</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 摄像头被遮挡</p>  
+                        
+                        <p>(2) 摄像头受到强烈的光线干扰</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 检查摄像头前是否有遮挡物</p>  
+                        
+                        <p>(2) 使摄像头在良好的光照条件下工作</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220398</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU温度超过运行值故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关为On状态</p>  
+                        
+                        <p>(2)系统温度大于100℃超过2s，或者</p>  
+                        
+                        <p>(3)成像系统温度超过（-49 C to +108 C)范围，持续超过150ms</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1、系统温度过高（超过100摄氏度超过2秒）</p>  
+                        
+                        <p>2、摄像头温度过高或者过低（摄像头温度超过--47 C 到+108 C 150ms)</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 检查ECU和摄像头的温度</p>  
+                        
+                        <p>(2) 为ECU提供一个好的环境温度</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220649</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU内部硬件故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>在质检或通电时发现电路永久性故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>电路永久性故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>换摄像头</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220762</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS匹配参数错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)当ECU启动时软件检测到关于匹配参数的故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 未写入匹配参数</p>  
+                        
+                        <p>(2) 写入错误版本的匹配参数</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 检查匹配参数的版本号</p>  
+                        
+                        <p>(2) 增加正确版本的匹配参数</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220855</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>LAS检车辆配置信息错误</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)车辆信息不正确或未定义。 DID F1F0， F1F4中写入的变量值无效</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 车辆配置信息的车型信息字段不正确</p>  
+                        
+                        <p>(2) 车辆配置信息未定义</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 检查车辆配置信息</p>  
+                        
+                        <p>(2) 增加正确的车辆配置信息</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220949</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU自检故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)ECU检测到任何内部电路的故障（例如，ECU温度传感器驱动程序故障，成像传感器驱动程序故障，DMA, RAM, ROM, UART,CAN缓冲区发生错误，奇偶校验错误,看门狗错误）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>发生任何内部电路的故障（例如，ECU温度传感器驱动程序故障，成像传感器驱动程序故障，DMA,RAM,ROM,UART,CAN缓冲区发生错误，奇偶校验错误,看门狗错误）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 车辆重新上下电</p>  
+                        
+                        <p>(2) 检查是否恢复正常</p>  
+                        
+                        <p>(3) 检查并修复可能的内部电路故障</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220A84</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>在线校准超出范围</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)当ECU软件检测到在线校准结果超出范围时。</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>在线校准结果超出范围</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 车辆重新上下电</p>  
+                        
+                        <p>(2) 检查是否恢复正常</p>  
+                        
+                        <p>(3) 用适当的方法重新校准摄像头</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220A85</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>初始校准超出范围</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)当ECU软件检测售后到校准结果超出范围时（SCAL 或 iOCAL）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>动态校准结果超出范围</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 车辆重新上下电</p>  
+                        
+                        <p>(2) 检查是否恢复正常</p>  
+                        
+                        <p>(3) 用适当的方法重新校准摄像头</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220A63</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>初始校准超时</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)当ECU软件检测到动态校准超时时</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>初始校准超时</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 车辆重新上下电</p>  
+                        
+                        <p>(2) 检查是否恢复正常</p>  
+                        
+                        <p>(3) 用适当的方法重新校准摄像头</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220A54</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>摄像头未校准</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)当ECU检测到摄像头未校准时（SCALE或 iOCAL）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>摄像头未校准完成</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 车辆重新上下电</p>  
+                        
+                        <p>(2) 检查是否恢复正常</p>  
+                        
+                        <p>(3) 用适当的方法重新校准摄像头</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220B17</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU内部电压高故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1) 点火开关为On状态</p>  
+                        
+                        <p>(2) ECU内部电压过高</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>控制器内部电路异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)关闭点火开关</p>  
+                        
+                        <p>(2)车辆重新上电，等待5秒钟</p>  
+                        
+                        <p>(3)清除DTC</p>  
+                        
+                        <p>(4)读取DTC 如果不存在DTC：MPC可复用 如果DTC仍然存在/处于活动状态：</p>  
+                        
+                        <p>(5)更换MPC</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220B16</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU内部电压低故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)ECU内部电压过低</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>控制器内部电路异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)关闭点火开关</p>  
+                        
+                        <p>(2)车辆重新上电，等待5秒钟</p>  
+                        
+                        <p>(3)清除DTC</p>  
+                        
+                        <p>(4)读取DTC 如果不存在DTC：MPC可复用 如果DTC仍然存在/处于活动状态：</p>  
+                        
+                        <p>(5)更换MPC</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220C45</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU软件故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)ECU软件异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>控制器软件运行异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)关闭点火开关</p>  
+                        
+                        <p>(2)车辆重新上电，等待5秒钟</p>  
+                        
+                        <p>(3)清除DTC</p>  
+                        
+                        <p>(4)读取DTC 如果不存在DTC：MPC可复用 如果DTC仍然存在/处于活动状态：</p>  
+                        
+                        <p>(5)更换MPC</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220D54</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU软件临时故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)ECU软件异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>控制器软件运行异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)关闭点火开关</p>  
+                        
+                        <p>(2)车辆重新上电，等待5秒钟</p>  
+                        
+                        <p>(3)清除DTC</p>  
+                        
+                        <p>(4)读取DTC 如果不存在DTC：MPC可复用 如果DTC仍然存在/处于活动状态：</p>  
+                        
+                        <p>(5)更换MPC</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220E60</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>ECU温度超过最大值故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)ECU内部温度过高</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>控制器温度过高</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)关闭点火开关</p>  
+                        
+                        <p>(2)采取适当的散热措施(如开启车内空调)</p>  
+                        
+                        <p>(3)车辆重新上电，等待5秒钟</p>  
+                        
+                        <p>(4)清除DTC</p>  
+                        
+                        <p>(5)读取DTC 如果不存在DTC：MPC可复用 如果DTC仍然存在/处于活动状态：</p>  
+                        
+                        <p>(6)更换MPC</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B220F32</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>MPC标定输入参数故障</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)点火开关为On状态</p>  
+                        
+                        <p>(2)控制器标定异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>控制器内部标定参数异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>(1)重新标定</p>  
+                        
+                        <p>(2)车辆重新上电，等待5秒钟</p>  
+                        
+                        <p>(3)清除DTC</p>  
+                        
+                        <p>(4)读取DTC 如果不存在DTC：MPC可复用 如果DTC仍然存在/处于活动状态：</p>  
+                        
+                        <p>(5)更换MPC</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               <tbody> 
+                  
+                  <tr></tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

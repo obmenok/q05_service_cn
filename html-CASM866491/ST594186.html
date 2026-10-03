@@ -1,0 +1,90 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="仪表上所有指示灯闪烁"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>仪表上所有指示灯闪烁</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST594186">仪表上所有指示灯闪烁</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               
+               <ol class="num"> 
+                  
+                  <li> 
+                     
+                     <p>观察仪表指示灯闪烁为单个指示灯闪烁还是多个指示灯同时闪烁</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>如果是多个指示灯同时闪烁的情况，通过诊断仪读取仪表故障码，看是否存在CAN BUSOFF相关故障码或者其他节点超时故障码，判断是否由整车CAN信号节点丢失或者CAN网络不稳定引起</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>如果是单个指示灯闪烁的情况，同样也需要使用诊断仪读取是否存在个别节点超时的故障码</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>如果不存在任何故障码，更换车机观察故障现象是否保持，如果现象保持，建议检查该指示灯对应的相关控制器是否存在故障；如果故障现象消失，将现场采集到的信息反馈给供应商，并将故障车机寄回供应商进行分析</p> 
+                     
+                  </li> 
+                  
+               </ol> 
+               
+            </p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

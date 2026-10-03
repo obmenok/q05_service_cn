@@ -1,0 +1,858 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="检查与确认"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>检查与确认</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576898">检查与确认</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">检查方法： 
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>故障现象</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>故障原因</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>排查方法及解决措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>雷达失效</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1、探头失效</p>  
+                           
+                           <p>2、线束问题</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1、整车电源ON档，将档位挂到R档；</p>  
+                           
+                           <p>2、手指轻触探头表面或耳朵贴到探头处，若有轻微振动或有噔、噔、噔的声音，证明探头硬件在工作；</p>  
+                           
+                           <p>3、打开360界面，人站在探头正前方50cm处，观察车机界面对应方位是否有报警，若有距离报警，则超声软件系统正常运行；</p>  
+                           
+                           <p>4、步骤二中若判断某个探头硬件未工作，以及步骤三种某个探头对应扇区报警异常，请检查对应探头线束连接是否正常；</p>  
+                           
+                           <p>5、步骤四中若确认线束连接良好，请与另一工作正常的探头交换测试，若更换后工作正常即判断为探头硬件故障，若更换后故障依然存在，请检查线束通断性；</p>  
+                           
+                           <p>6、其他可通过读取DTC故障码初步判断故障所在，故障描述及排查方法见DTC故障码表格。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p">DTC故障列表：</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">故障代码</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">含义</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">触发条件</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">可能故障原因</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">维修步骤</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190010</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前角传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index1）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190000</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前角传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index1）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190101</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前角传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index1）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190202</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前角传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index1）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190303</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前中传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index2）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190404</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前中传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index2）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190505</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前中传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index2）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190606</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前中传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index2）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190707</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前中传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（indes3）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190808</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前中传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（indes3）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190909</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前中传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index3）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190A0A</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前中传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（indes3）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190B0B</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前角传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index4）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190C0C</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前角传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index4）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190D0D</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前角传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index4）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190E0E</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前角传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index4）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B190F0F</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前边传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index5）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191000</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前边传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index5）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191101</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前边传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index5）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191202</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右前边传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index5）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191303</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前边传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index0）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191404</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前边传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index0）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191505</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前边传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index0）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191606</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左前边传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index0）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191707</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后边传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index11）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191808</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后边传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index11）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191909</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后边传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index11）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191A0A</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后边传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index11）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191B0B</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后边传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index6）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191C0C</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后边传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index6）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191D0D</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后边传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index6）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191E0E</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后边传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index6）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B191F0F</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后角传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index7): ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192000</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后角传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index7): ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192101</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后角传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index7): ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192202</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后角传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index7): ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192303</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后中传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index8): ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192404</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后中传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index8): ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192505</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后中传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index8): ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192606</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">右后中传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index8): ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192707</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后中传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index9): ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192808</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后中传感器内部组件异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index9): ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192909</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后中传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index9): ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192A0A</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后中传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC(index9): ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192B0B</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后角传感器信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index10）: ADAPTER_GetSensorDiagForC3B_R的bit2 =1或者ADAPTER_GetItfForC3B_R的bit0=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.线材老化短路 2.接插件连接异常 3.ECU与该传感器信号回路异常 4.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查线束 2.检查接插件 3.检查ECU电路 4.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192C0C</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后角传感器内部组件故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index10）: ADAPTER_GetSensorDiagForC3B_R的bit0或者bit1或者bit5
+                        =1或者ADAPTER_GetItfForC3B_R的bit2或bit4=1
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.环境温度过高 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.远离热源 2.等待环境降温 3.如果多次重启后持续出现，检查传感器 4.检查传感器，检查线束，接插件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192D0D</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后角传感器电源故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index10）: ADAPTER_GetSensorDiagForC3B_R的bit3或bit4=1或者ADAPTER_GetItfForC3B_R的bit1或bit3=1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.传感器供电异常 2.传感器故障</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1.检查传感器供电 （线束） 2.检查传感器</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B192E0E</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">左后角传感器表面附着物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压8.5-16.5V； 2. 允许检查DTC 3. 电源状态为IGN ON后3s. 4.当检查到如下情况，则应设此DTC（index10）: ADAPTER_GetSensorDiagForC3B_R的bit6 =1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">冰雪等异物覆盖传感器表面</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1，清理传感器表面 2，如果多次重启后持续出现，检查传感器</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

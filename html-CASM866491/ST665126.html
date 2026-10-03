@@ -1,0 +1,250 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="座椅通风加热功能失效"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>座椅通风加热功能失效</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST665126">座椅通风加热功能失效</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">无通风加热显示，且通风加热无功能的诊断流程：</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>测试步骤</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>细节/结果/措施</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1.检查主机通风加热信号发送是否正常发送。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查主机通风加热信号发送是否正常发送：</p>  
+                        
+                        <p>使用CANoe设备连接车辆诊断接口；触碰座椅通风加热开关，查看Bcan网络确认主机是否有通风加热信号下发，确认下发信号是否正确。</p>  
+                        
+                        <p>→是，至步骤2；</p>  
+                        
+                        <p>→否，参考主机维修章节维修主机。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>2.检查座椅通风加热控制器软件是否处于异常状态。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查控制器软件是否处于异常状态：</p>  
+                        
+                        <p>断开蓄电池负极或座椅下控制器和车身线束连接接插件，进行控制器手动复位。确认复位后通风加热功能是否正常运行。</p>  
+                        
+                        <p>→是，确认为控制器软件状态异常导致。</p>  
+                        
+                        <p>→否，至步骤3。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>3.检查座椅通风加热功能继电器是否损坏。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查通风加热功能继电器是否损坏：</p>  
+                        
+                        <p>更换通风加热功能继电器，确认通风加热功能是否恢复正常。</p>  
+                        
+                        <p>→是，确认为继电器损坏导致。</p>  
+                        
+                        <p>→否，至步骤4。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>4.检查座椅风扇、加热垫是否损坏。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>取下风扇、加热垫和座椅连接接插件，使用万用表检查风扇电流和加热垫电阻。</p>  
+                        
+                        <p>→无电流，确认为风扇损坏导致</p>  
+                        
+                        <p>→电阻无穷大，确认为加热垫损坏导致。</p>  
+                        
+                        <p>→电阻正常，至步骤5。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>5.检查座椅通风加热控制器硬件是否损坏。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查控制器硬件是否损坏：</p>  
+                        
+                        <p>更换控制器，确认通风加热功能是否恢复正常。</p>  
+                        
+                        <p>→是，确认为控制器硬件损坏导致，更换座椅通风加热控制器。</p>  
+                        
+                        <p>→否，从其他症状查找故障原因。</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p">无通风加热显示，但通风加热功能正常的诊断流程：</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>测试步骤</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>细节/结果/措施</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1.检查通风加热控制器软件是否处于异常状态。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查通风加热控制器软件是否处于异常状态：</p>  
+                        
+                        <p>断开蓄电池负极或座椅下控制器和车身线束连接接插件，进行控制器手动复位。确认复位后通风加热功能是否正常运行。</p>  
+                        
+                        <p>→是，确认为控制器软件状态异常导致。</p>  
+                        
+                        <p>→否，从其他症状查找故障原因。</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

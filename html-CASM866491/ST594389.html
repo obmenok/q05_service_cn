@@ -1,0 +1,2811 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="电气故障排查"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="ST594389"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>电气故障排查</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="ST594389">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST594389">电气故障排查</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">注意事项：</span> 
+               
+            </p>  
+            
+            <p class="p">1、在整车正常上电情况下，使用诊断仪读取电机系统相应故障DTC码，并根据DTC码对应按照如下排查方法进行排查，电气故障列表详见附表。</p>  
+            
+            <p class="p">2、存在以下情况，必须进行旋变自学习操作，具体方法将旋变自学习:</p>  
+            
+            <p class="p">（1）单独更换电机减速器合装组件或电机控制器总成； （2）旋变初始位置被清除。</p>  
+            
+            <p class="p">P191618 高压过压报警:</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检测项目</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>细节/结果/措施</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1. 检查直流高压回路故障信息</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b"></span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A. 使用诊断仪，读取DCDC和电池管理系统的故障数据，检查DCDC输入或电池管理系统是否报高压过压类故障。</p>  
+                        
+                        <p>→是</p>  
+                        
+                        <p>请排查电池系统过压原因。</p>  
+                        
+                        <p>→否</p>  
+                        
+                        <p>进入步骤2。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>2. 检查电机电机控制器总成直流输入端</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b"></span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A. 检查直流母线接插端子的螺栓是否松动或脱落？</p>  
+                        
+                        <p>→是</p>  
+                        
+                        <p>重新打紧螺栓，然后进入步骤3。</p>  
+                        
+                        <p>→否</p>  
+                        
+                        <p>进入步骤3。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>3.重新上电检查故障</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b"></span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A．重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                        
+                        <p>→是</p>  
+                        
+                        <p>进入步骤4。</p>  
+                        
+                        <p>→否</p>  
+                        
+                        <p>恢复车辆。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>4.拆卸电驱动总成</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>5.更换电机控制器总成</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p> 
+                           <span class="ph b"></span> 
+                           
+                        </p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A．重新上电，重新旋变自学习（详见4.2），使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                        
+                        <p>→是</p>  
+                        
+                        <p>进入步骤6。</p>  
+                        
+                        <p>→否</p>  
+                        
+                        <p>恢复车辆。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>6. 若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P191718 高压过压故障:</span>参照P191618进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P191716 高压欠压警告:</span>参照P191618进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P191616 高压欠压故障:</span>参照P191618进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197814</span>  
+               <span class="ph b">旋变平方和校验故障：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检测项目</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>细节/结果/措施</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1.检查旋变定子组件连接线束总成情况</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A.将车挪上举升机，整车下电（钥匙闭锁），等待2min，整车高压降至36V以下后，落下电驱动系统总成，拆开电机接线盒盖，找到旋变定子组件线束，按下卡扣，拔掉旋变定子组件端接插件。</p>  
+                        
+                        <p>B.查看旋变定子组件端接插件是否有针脚退针、弯曲？</p>  
+                        
+                        <p>→若退针or弯曲</p>  
+                        
+                        <p>则更换旋变定子组件。</p>  
+                        
+                        <p>C.若接插件完好，用万用表测量旋变定子组件的针脚，2-6、4-8、3-7线束之间的电阻是否超过（15±2.25）Ω、（44±6.6）Ω、（42±6.3）Ω？</p>  
+                        
+                        <p>→是</p>  
+                        
+                        <p>更换旋变定子组件；</p>  
+                        
+                        <p>D. 测量旋变定子组件绝缘阻值</p>  
+                        
+                        <p>用绝缘表500V档分别测量2、6、4、8、3、7线束对电机壳体绝缘电阻是否低于250 MΩ。</p>  
+                        
+                        <p>→是</p>  
+                        
+                        <p>更换旋变定子组件。</p>  
+                        
+                        <p>→否</p>  
+                        
+                        <p>进入步骤2。</p>  
+                        
+                        <p>E．排查完以上步骤，若有更换电机减速器总成，则恢复车辆后，重新旋变自学习（详见4.2）。进入步骤3。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>2.更换电机控制器总成</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A．恢复车辆，重新旋变自学习（详见4.2），清除故障码，再次重新上电，是否报该故障？</p>  
+                        
+                        <p>→是</p>  
+                        
+                        <p>进入步骤3。</p>  
+                        
+                        <p>→否</p>  
+                        
+                        <p>恢复车辆。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>3. 若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P197396</span>  
+               <span class="ph b">DSADC旋变正弦差分信号输出范围故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197496</span>  
+               <span class="ph b">DSADC旋变余弦差分信号输出范围故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195021</span>  
+               <span class="ph b">旋转变压器EXC+对地短路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195011</span>  
+               <span class="ph b">旋转变压器EXC+/-短路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195013</span>  
+               <span class="ph b">旋转变压器sin单端开路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195122</span>  
+               <span class="ph b">旋转变压器sin单端对地短路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195121</span>  
+               <span class="ph b">旋转变压器sin单端对电源短路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195111</span>  
+               <span class="ph b">旋转变压器cos单端开路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195113</span>  
+               <span class="ph b">旋转变压器cos单端对地短路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195217</span>  
+               <span class="ph b">旋转变压器cos单端对电源短路故障：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195462</span>  
+               <span class="ph b">位置角度跟踪丢失：</span>参照P197814进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197869</span>  
+               <span class="ph b">旋变角度未写入故障：</span>进行旋变自学习（详见4.2）。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P196692</span>  
+               <span class="ph b">电机超速报警：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.待电机冷却至室温后，重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否还有该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>参照P197814进行排查。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>不做处理，提醒客户不要超速行驶。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2. 若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               <span class="ph b">P196792</span>  
+               <span class="ph b">电机超速故障：</span>参照P196692进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197597</span>  
+               <span class="ph b">旋变低通滤波转速超范围：</span>参照P196692进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194667</span>  
+               <span class="ph b">电机温度传感器故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.待电机冷却至室温后，重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否还有该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>不做处理，恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.检查电机温度传感器的接插件是否受损</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 将车挪上举升机，整车下电（钥匙闭锁），等待2min，整车高压降至36V以下后，落下电驱动系统总成，拆开电机接线盒盖，按下卡扣，拔掉电机温度传感器的接插件，查看电机端的接插件是否针脚退针、弯曲？</p>  
+                           
+                           <p>→若退针or弯曲</p>  
+                           
+                           <p>更换电机减速器合装组件。</p>  
+                           
+                           <p>→若正常</p>  
+                           
+                           <p>查看旋变定子组件端接插件、电控端的接插件是否有退针、破损？</p>  
+                           
+                           <p>→若旋转变压器定子总成端接插件退针</p>  
+                           
+                           <p>则更换旋变定子组件。</p>  
+                           
+                           <p>→若电控端的接插件退针</p>  
+                           
+                           <p>则更换电机控制器总成</p>  
+                           
+                           <p>→若接插件都完好</p>  
+                           
+                           <p>用万用表测量旋变定子组件端接插件的针脚1-5之间的电阻是否超出（6～33）kΩ（环境温度0℃～40℃）范围？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换电机减速器合装组件。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.检查电机温度传感器是否短接壳体</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>用绝缘表500V档测量旋变定子组件端1、5针脚对壳体的电阻是否低于20MΩ？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换电机减速器合装组件。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.更换电机控制器总成</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A．恢复车辆，重新旋变自学习（详见4.2），清除故障码，再次重新上电，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤5。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>5.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               <span class="ph b">P195098</span>  
+               <span class="ph b">电机过温报警：</span>参照P194667进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194998</span>  
+               <span class="ph b">电机过温故障：</span>参照P194667进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194567</span>  
+               <span class="ph b">IGBT温度传感器故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.待电机冷却至室温后，重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否还有该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>不做处理，恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.更换电机控制器总成</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A．恢复车辆，重新旋变自学习（详见4.2），清除故障码，再次重新上电，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤3。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194467</span>  
+               <span class="ph b">两相IGBT温度不一致性：</span>参照P194567进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194555</span>  
+               <span class="ph b">U相IGBT温度传感器故障：</span>参照P194567进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194556</span>  
+               <span class="ph b">V相IGBT温度传感器故障：</span>参照P194567进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194557 W</span>  
+               <span class="ph b">相IGBT温度传感器故障：</span>参照P194567进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194698</span>  
+               <span class="ph b">IGBT过温报警：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.待电机冷却至室温后，重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否还有该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>不做处理，恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.检查冷却水是否正常工作</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.驾驶车辆正常行驶2km，使电机控制器总成升温，停车检查冷却水是否运转？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤4。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.更换冷却水总成</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A．恢复车辆，清除故障码，再次重新上电，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤4。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.更换电机控制器总成</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A．恢复车辆，重新旋变自学习（详见4.2），清除故障码，再次重新上电，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤5。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>5.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194498</span>  
+               <span class="ph b">IGBT过温故障：</span>参照P194698进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194128</span>  
+               <span class="ph b">PCB过温警告：</span>参照P194698进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194227</span>  
+               <span class="ph b">PCB温度合理性故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.整车下电后，重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否还有该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>不做处理，恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.更换电机控制器总成</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A．恢复车辆，重新旋变自学习（详见4.2），清除故障码，再次重新上电，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤3。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P193924</span>  
+               <span class="ph b">U相电流传感器合理性故障：</span>参照P191618进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P193925</span>  
+               <span class="ph b">W相电流传感器合理性故障：</span>参照P191618进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P199822</span>  
+               <span class="ph b">U相零偏故障：</span>参照P191618进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P199922</span>  
+               <span class="ph b">W相零偏故障：</span>参照P194227进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P193964</span>  
+               <span class="ph b">直流母线电压传感器采样合理性故障：</span>参照P194227进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P191619</span>  
+               <span class="ph b">高压电压校验故障：</span>参照P194227进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P190123</span>  
+               <span class="ph b">硬件过压故障：</span>参照P194227进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P193819</span>  
+               <span class="ph b">硬件过流故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="25%" colspan="3" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" colspan="4" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.检测三相铜排连接螺栓</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="25%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 将车挪上举升机，整车下电（钥匙闭锁），等待2min，整车高压降至36V以下后，落下电驱动系统总成，拆开电机接线盒盖，检查三相铜排连接螺栓是否松动?</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>拧紧螺栓；</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤2。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" colspan="4" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.检查电机及电控三相铜排总成的绝缘电阻</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" colspan="3" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 观察是否有进水痕迹，取下三相铜排连接螺栓，用绝缘表1000V档，分别测量电机三相(U、V、W)铜排对机壳的的绝缘电阻、分别测量电控三相铜排总成(U、V、W)铜排对机壳的的绝缘电阻。</p>  
+                           
+                           <p>→电机端绝缘电阻小于20 MΩ</p>  
+                           
+                           <p>更换电机减速器合装组件。</p>  
+                           
+                           <p>→电机控制器端绝缘电阻小于5 MΩ</p>  
+                           
+                           <p>更换电机控制器总成。</p>  
+                           
+                           <p>若不存在以上两种问题，进入步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" colspan="4" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，请参照P197814（旋变平方和校验故障），进行故障排查，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P194026</span>  
+               <span class="ph b">软件过流故障：</span>参照P193819进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197767</span>  
+               <span class="ph b">下桥驱动芯片故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.待电机冷却至室温后，重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否还有该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>不做处理，恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.更换电机控制器总成</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A．恢复车辆，重新旋变自学习（详见4.2），清除故障码，再次重新上电，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤4。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               <span class="ph b">P197766</span>  
+               <span class="ph b">上桥驱动芯片故障：</span>参照P197767进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0187</span>  
+               <span class="ph b">114通讯超时故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.检查OBD接入设备情况</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 检查是否有非官方授权的设备，通过接插件或线路改装接入OBD？</p>  
+                           
+                           <p>→若有</p>  
+                           
+                           <p>取下非官方授权设备。</p>  
+                           
+                           <p>→若无</p>  
+                           
+                           <p>进入步骤2。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2. 检查电机控制器总成低压接口情况</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 整车下电（钥匙闭锁），按下卡扣拔掉安全开关（若有），按下卡扣拔下电机控制器总成低压接插件，查看电机控制器总成端低压接插件所有引脚是否针脚退针、弯曲？</p>  
+                           
+                           <p>→若有退针or弯曲</p>  
+                           
+                           <p>进入步骤7。</p>  
+                           
+                           <p>→若无退针or弯曲现象</p>  
+                           
+                           <p>进入步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.检查电机控制器总成低压输入线束端情况</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 按下卡扣拔下电机控制器总成低压接插件，查看低压线束端的所有引脚是否有退针、破损、弯曲？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换低压线束。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>用万用表测量针脚22和23之间的电阻值是否为120Ω？</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>检查整车动力CAN网络是否有对地异常现象，申请线束专业技术支持。</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.检查整车控制器低压接口情况</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 按下卡扣拔下整车控制器低压接插件，查看整车控制器端所有引脚是否针脚退针、弯曲？</p>  
+                           
+                           <p>→若有退针or弯曲</p>  
+                           
+                           <p>请排查整车控制器。</p>  
+                           
+                           <p>→若无退针或弯曲现象</p>  
+                           
+                           <p>进入步骤5。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>5. 检查整车控制器低压输入线束情况</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 按下卡扣拔下整车控制器低压接插件，查看低压线束端的所有引脚是否有退针、破损、弯曲？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换低压线束。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤6。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>6.检查电机控制器总成和整车控制器之间通讯</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.使用万用表的通断档位，检测电机控制器低压线束端的22、23引脚分别是否和整车控制器低压线束端的引脚是否导通？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>排查整车控制器，或进入步骤7。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>排查低压线束。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>7.更换电机控制器总成</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 恢复车辆，重新旋变自学习（详见4.2），清除故障码，再次重新上电，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤8。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>恢复车辆。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>8.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0687</span>  
+               <span class="ph b">3FC通讯超时故障：</span>参照U1C0187进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0887</span>  
+               <span class="ph b">190通讯超时故障：</span>参照U1C0187 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0787</span>  
+               <span class="ph b">398通讯超时故障：</span>参照U1C0187 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0287</span>  
+               <span class="ph b">320通讯超时故障：</span>参照U1C0187 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0387</span>  
+               <span class="ph b">17A通讯超时故障：</span>参照U1C0187 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0487</span>  
+               <span class="ph b">1AF通讯超时故障：</span>参照U1C0187 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0088</span>  
+               <span class="ph b">长时Busoff故障：</span>参照U1C0187 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0183 IPU</span>  
+               <span class="ph b">114报文校验错误：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1. 参照U1C0187进行排查</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2. 检查整车控制器故障</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.检查整车控制器是否有故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>排查整车控制器故障。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3. 检查电驱动控制系统总成软件版本号</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.检查电驱动控制系统总成软件版本号是否同最新技术通知一致（注：同一车型）？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤4。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>更新软件（详见4.1），进入步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0283</span>  
+               <span class="ph b">3FC报文校验错误：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0383</span>  
+               <span class="ph b">190报文校验错误：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0783</span>  
+               <span class="ph b">320报文校验错误：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0587</span>  
+               <span class="ph b">17A报文校验错误：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0182</span>  
+               <span class="ph b">114Counter诊断：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0282</span>  
+               <span class="ph b">3FCCounter诊断：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0382</span>  
+               <span class="ph b">190Counter诊断：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0782</span>  
+               <span class="ph b">320Counter诊断：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">U1C0D85</span>  
+               <span class="ph b">17ACounter诊断：</span>参照U1C0183 进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P196893</span>  
+               <span class="ph b">堵转故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1. 检查堵转工况</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.问询车主，检查是否存在大油门且车轮堵转、且持续时间超过5s的工况？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>不作处理，提醒客户长时间堵转会影响电驱系统寿命，建议正常驾驶操作。</p>  
+                           
+                           <p>B.检查制动卡钳是否锁死？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>维修制动卡钳。</p>  
+                           
+                           <p>若不存在上述情况，进入步骤2</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.参照P197814（旋变平方和校验故障） 进行排查</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3. 检查电驱动控制系统总成软件版本号</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.检查电驱动控制系统总成软件版本号是否同最新技术通知一致（注：同一车型）？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤4。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>更新软件（详见4.1），进入步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               <span class="ph b">P190017</span>  
+               <span class="ph b">IPU低压供电过压故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>完成维修。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.检查小电瓶电压</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.整车下电，断开DCDC输出正极接插件，用万用表检查小电瓶电压是否高于18V（欠压故障时则检查是否低于7.5V）？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换小电瓶。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.检查DCDC是否工作</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.整车下电，断开DCDC输出正极接插件，检查小电瓶正负极是否短路？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换线束或小电瓶。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               <span class="ph b">P190016</span>  
+               <span class="ph b">IPU低压供电欠压故障：</span>参照P190017进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P191822</span>  
+               <span class="ph b">1.25V电压故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>完成维修。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.检查小电瓶电压</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 整车下电，断开DCDC输出正极接插件，用万用表检查小电瓶电压是否正常？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换小电瓶。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3.检查电驱动系统总成低压线束是否正常</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.整车下电，检查电驱动系统总成低压线束是否出现断路或者短路？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>更换线束或小电瓶。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>进入步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               <span class="ph b">P191820</span>  
+               <span class="ph b">24V供电故障：</span>参照P191822进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P190163 放电故障</span>  
+               <span class="ph b">：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>完成维修。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               <span class="ph b">P197663</span>  
+               <span class="ph b">NVM读取故障：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p></p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>完成维修。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.若按照上述步骤全部排查完毕，恢复车辆。重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197664</span>  
+               <span class="ph b">NVM读取超限故障：</span>参照P197663进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197665</span>  
+               <span class="ph b">NVM写入故障：</span>参照P197663进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195763</span>  
+               <span class="ph b">离线零点学习超时：</span>参照P197663进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P195764</span>  
+               <span class="ph b">离线零点计算错误：</span>参照P197663进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197022</span>  
+               <span class="ph b">目标扭矩过大故障</span>  
+               <span class="ph b">：</span>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>检测项目</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>细节/结果/措施</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1.读取故障码</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤2。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>完成维修。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2.旋变自学习（详见4.2）</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 重新上电，使用诊断仪进入电机控制器总成界面，清除历史故障码，读取当前故障码，是否报该故障？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤3。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>完成维修。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3. 检查电驱动控制系统总成软件版本号</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p> 
+                              <span class="ph b"></span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A.检查电驱动控制系统总成软件版本号是否同最新技术通知一致（注：同一车型）？</p>  
+                           
+                           <p>→是</p>  
+                           
+                           <p>进入步骤4。</p>  
+                           
+                           <p>→否</p>  
+                           
+                           <p>更新软件（详见4.1），进入步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4.重新上电行驶，读取故障码，若还有该故障，申请技术支持。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197262</span>  
+               <span class="ph b">估算转矩与目标转矩反向：</span>参照P197022进行排查。
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P197362</span>  
+               <span class="ph b">估算转矩与目标转矩偏大：</span>参照P197022进行排查。
+               
+            </p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

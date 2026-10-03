@@ -1,0 +1,196 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="软件升级(系统、语音、地图)"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>软件升级(系统、语音、地图)</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST676287">软件升级(系统、语音、地图)</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">U盘升级准备工作</span> 
+               
+            </p>  
+            
+            <p class="p">U盘升级需要的控制器：EDC以及需要升级的控制器。</p>  
+            
+            <p class="p">U盘升级需要的工具：U盘、U盘制包工具，OTA团队提供。</p>  
+            
+            <p class="p">U盘升级升级对象升级包要求：</p>  
+            
+            <ul name="contents" class="ul"> 
+               
+               <li> 
+                  
+                  <p>FBL升级对象，如VIU/EDC MCU等准备对应的.sdb升级包(可以联系OTA系统工程师生成).</p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>系统固件升级对象，如C2 OS/EDC A盒OS准备升级对象的压缩包。</p> 
+                  
+               </li> 
+               
+            </ul>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">下载U盘包</h3> 
+               
+               
+               <p class="p">联系对应的OTA系统工程师获取。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">准备U盘包</h3> 
+               
+               
+               <p class="p">将下载的zip文件解压，将解压后的IncallUpgrade文件夹放入U盘根目录下即可。</p>  
+               
+               <p class="p"> 
+                  
+                  <div> 
+                     
+                     <h3 class="title topictitle1"></h3>  
+                     
+                     <div class="imagecenter"><img width="" src="image/P335252.png" alt="P335252"></img></div> 
+                     
+                  </div> 
+                  
+               </p>  
+               
+               <p class="p">注：U盘根目录下只能有一个要升级的IncallUpgrade文件夹，同名文件应删去。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">U盘车端操作</h3> 
+               
+               
+               <p class="p">1、若插入U盘，则会弹窗U盘包识别情况</p>  
+               
+               <p class="p">点击“安装”</p>  
+               
+               <p class="p">升级数据准备界面</p>  
+               
+               <p class="p"> 
+                  
+                  <div> 
+                     
+                     <h3 class="title topictitle1"></h3>  
+                     
+                     <div class="imagecenter"><img width="" src="image/P335261.png" alt="P335261"></img></div> 
+                     
+                  </div> 
+                  
+               </p>  
+               
+               <p class="p">拷贝完成后点击“立即升级”按钮</p>  
+               
+               <p class="p">2、 进入升级阶段</p>  
+               
+               <p class="p"> 
+                  
+                  <div> 
+                     
+                     <h3 class="title topictitle1"></h3>  
+                     
+                     <div class="imagecenter"><img width="" src="image/P335262.png" alt="P335262"></img></div> 
+                     
+                  </div> 
+                  
+               </p>  
+               
+               <p class="p">点击“立即升级”跳过倒计时</p>  
+               
+               <p class="p"> 
+                  
+                  <div> 
+                     
+                     <h3 class="title topictitle1"></h3>  
+                     
+                     <div class="imagecenter"><img width="" src="image/P335263.png" alt="P335263"></img></div> 
+                     
+                  </div> 
+                  
+               </p>  
+               
+               <p class="p">进入升级条件校验界面</p>  
+               
+               <p class="p"> 
+                  
+                  <div> 
+                     
+                     <h3 class="title topictitle1"></h3>  
+                     
+                     <div class="imagecenter"><img width="" src="image/P335264.png" alt="P335264"></img></div> 
+                     
+                  </div> 
+                  
+               </p> 
+               
+            </div>
+            
+            
+            <p class="p">校验结束完成升级。</p>  
+            
+            <div class="section">OTA升级车端操作</div>
+            
+            
+            <p class="p">云端推送OTA任务后，在车辆上电后车机会自动检测软件版本，若有版本更新提示，点击升级，按照车端提示进行操作即可。</p>  
+            
+            <div></div> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

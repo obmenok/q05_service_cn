@@ -1,0 +1,353 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="车道辅助控制及前视摄像头总成"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>车道辅助控制及前视摄像头总成</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST656711">车道辅助控制及前视摄像头总成</h3>
+         
+         
+         <div class="body"> 
+            
+            <div class="section">
+               <h3 class="title topictitle1">接口定义</h3> 
+               
+               
+               <div class="imagecenter"><img width="50%" src="image/P247104.jpg" alt="P245068"></img></div>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr align="left" valign="middle"> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">针脚编号</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">针脚定义（描述）</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">信号类型</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">信号范围</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">备注</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">1</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">IG1电源</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">电源，V_IG1</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">9V-16V，额定电流0.58A</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">点火开关on，对车身搭铁</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">2</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">第1路CAN总线，高</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">CAN总线</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">与整车ADASCAN（2M）连接</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">3</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">第1路CAN总线，低</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">CAN总线</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">与整车ADASCAN（2M）连接</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">4</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">5</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">电源地</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">电源，GND</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">0V，额定电流0.58A</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">始终，对车身搭铁</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">6</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">7</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">8</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">9</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">10</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">第2路CAN总线，高</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">私CAN总线</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">11</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">第2路CAN总线，低</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">私CAN总线</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">12</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">13</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">14</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">15</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr>  
+                     
+                     <tr align="left" valign="middle"> 
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">16</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td>  
+                        
+                        <td width="1" align="left" valign="&#xA;            top&#xA;          ">-</td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </div>
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

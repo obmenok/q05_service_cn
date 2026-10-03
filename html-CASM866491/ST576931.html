@@ -1,0 +1,524 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="DTC故障码列表及简单排查方法"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="ST576931"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>DTC故障码列表及简单排查方法</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="ST576931">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576931">DTC故障码列表及简单排查方法</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">系统级诊断（含所有由架构室管控的以太网传输、ECU输入电压）和产品级诊断（包含有产品方管控的以太网通信类诊断；内部芯片电源诊断；开关及驱动诊断；ECU内部诊断 ；控制器管脚、线路通断诊断等等）</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        <span class="ph b">序号</span> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        <span class="ph b">故障代码</span> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        <span class="ph b">含义</span> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        <span class="ph b">可能故障原因</span> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        <span class="ph b">维修建议</span> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">U19C887</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">以太网非预期的链接断开</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">线路断开或者对方设备掉电</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">检查线路连接以及对方设备运行情况</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">2</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">U19C986</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">链接稳定后以太网信号质量低</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">可能发送方以太网硬件故障，线缆质量差，外界干扰，或者线缆长度超过15米</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">更换发送方硬件检查通信线缆质量和长度</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">3</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175016</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">ECU输入电压低</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达供电电压过低</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">检查雷达供电电压、供电线路</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">4</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175117</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">ECU输入电压高</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达供电电压过高</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">检查雷达供电电压、供电线路</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">5</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175216</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">ECU安全相关电压低（【故障影响】雷达点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达硬件失效导致某个内部电压过高</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">6</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175317</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">ECU安全相关电压高（【故障影响】对雷达本体有严重危害，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达硬件失效导致某个内部电压过低</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">7</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175436</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">时钟频率过慢（【故障影响】Controller运行异常，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达硬件失效导致某个时钟源频偏</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">8</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175537</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">时钟频率过快（【故障影响】Controller运行异常，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达硬件失效导致某个时钟源频偏</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">9</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175653</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">程序流异常（【故障影响】Controller运行异常，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内部处理器的程序流发生卡滞、错序等异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">10</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175749</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">处理器异常(ARM侧或FPGA Logic)（【故障影响】Controller运行异常，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内部处理器的逻辑单元异常或雷达处理器单元输出信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">11</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175841</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">checksum错误（CRC校验错误或奇偶校验错误）（【故障影响】雷达点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达校准数据异常，数据不可信</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">12</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175942</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">常规内存不可修复错误（ECC 多bit错误）（【故障影响】雷达点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内存单元不可修复异常，数据不可信</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">13</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175A43</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">常规内存可修复错误（ECC 单bits错误）（【故障影响】对雷达安全无影响的失效）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内存单元可修复异常，数据无影响</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">14</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175B93</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">发射端通道瞎线故障（【故障影响】雷达多通道瞎线，点云数据部分丢失，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达发射端老化导致出光功率下降 或 雷达发射端链路异常导致激光器供电不足</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">15</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175C94</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">接收端异常（【故障影响】雷达多通道瞎线，点云数据部分丢失，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达发射端瞎线或雷达接收端瞎线</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">16</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175D01</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">失效导致接受功能异常（【故障影响】雷达点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达接收端链路异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">17</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175E37</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">电机转速过快（【故障影响】失效导致违背人眼安全，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达电机由于外部原因转速异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">18</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B175F36</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">电机转速过慢（【故障影响】雷达点云数据不可信-点云刷新频率变慢）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达由于外部原因转速持续较慢</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">19</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176001</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">电机旋转方向异常（【故障影响】雷达点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达旋转方向与预期反向或雷达旋转方向检测单元输出异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">20</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176101</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">编码器输出不可修复故障（【故障影响】雷达点云数据完全消失，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达电机的编码器硬件失效</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">21</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176201</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">码盘脏污不可修复故障（【故障影响】雷达输出点云水平角度分辨率降低，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达电机码盘的码道存在异物导致码盘输出信号异常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">22</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176301</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">数模转换故障（【故障影响】雷达点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内部ADC硬件失效</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">23</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176413</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">接插件开路（【故障影响】雷达点云数据完全消失，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内部电路板之间接插件扣合松脱或存在异物</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">24</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B17664B</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">温度过高（【故障影响】对雷达本体有严重危害，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达过温</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">关闭雷达或改善雷达散热条件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">25</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176701</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">IC内部的安全机制自检失效（【故障影响】安全机制失效）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内部安全逻辑单元模块失效</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">26</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176801</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">外设的安全机制自检失效（【故障影响】安全机制失效）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达安全机制硬件单元失效</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">27</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176901</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">光罩脏污故障（【故障影响】雷达点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">光罩脏污</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">擦除光罩</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">28</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176A01</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达启动异常（【故障影响】雷达不能正常启动，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达软件启动失败或雷达电机启动失败</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">29</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176B01</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">温度传感器异常（【故障影响】雷达距离和反射率异常或存在高温保护失效风险，点云数据不可信）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内部关键NTC硬件失效或温度采样链路失效</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">30</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">B176C01</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">温度传感器异常（【故障影响】雷达无影响）</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">雷达内部非关键NTC硬件失效或温度采样链路失效</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">若可以保证雷达使用环境不会过温，则可以忽略该故障，否则清除故障状态后重启雷达，若问题一直存在，联系供应商售后</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

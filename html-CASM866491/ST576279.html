@@ -1,0 +1,242 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="集成制动控制模块（IBCU）检查"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>集成制动控制模块（IBCU）检查</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576279">集成制动控制模块（IBCU）检查</h3>
+         
+         
+         <div class="body"> 
+            
+            <div>
+               <div class="wl-attention prespace postspace" data-attention-type="caution" id="d45801e12">
+                  <header>
+                     <h2>注意</h2>
+                  </header>
+                  <div class="attention-text postspace-s wl-attention-content"> 
+                     
+                     <p class="p">在进行诊断前，应确保制动液位和警告指示灯工作正常，制动系统没有任何故障代码。</p> 
+                     
+                  </div>
+               </div>
+               
+            </div>  
+            
+            <p class="p"> 
+               <span class="ph b">正常情况</span> 
+               
+            </p>  
+            
+            <p class="p">通常情况下，制动踏板感觉或行程的改变，表示制动系统中可能有问题。但以下状况是正常的，并不表示集成制动控制模块需要维修：</p>  
+            
+            <ol class="num"> 
+               
+               <li> 
+                  
+                  <p>新的制动系统设计与以往不同，踩制动踏板所需的力较轻。</p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>制动器正常工作时，制动液位应下降，释放时上升，但制动液总量不变。</p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>制动液液面高度会随着制动衬片的磨损而下降。</p> 
+                  
+               </li> 
+               
+            </ol>  
+            
+            <p class="p"> 
+               <span class="ph b">不正常情况</span> 
+               
+            </p>  
+            
+            <p class="p">制动踏板感觉或行程的改变，表示制动系统中可能有问题。以下的状况是不正常的，且表示集成制动控制模块可能需要维修：</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="45%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>症状</p> 
+                        
+                     </td>  
+                     
+                     <td width="55.00000000000001%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>集成制动控制模块</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="45%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>踩下制动踏板，制动踏板快速下降</p> 
+                        
+                     </td>  
+                     
+                     <td width="55.00000000000001%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>外部泄露（开裂，接头，密封件失效）</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="45%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>踩下并保持制动踏板，制动踏板缓慢下降</p> 
+                        
+                     </td>  
+                     
+                     <td width="55.00000000000001%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>外部泄露；内部泄露（主缸密封件老化）；</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="45%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>踩下制动踏板，制动踏板过低或感觉软绵</p> 
+                        
+                     </td>  
+                     
+                     <td width="55.00000000000001%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>进油孔或者储油罐通风孔堵塞； 液压系统中有空气</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="45%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>制动踏板回位过慢</p> 
+                        
+                     </td>  
+                     
+                     <td width="55.00000000000001%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>集成制动控制模块推杆弯曲； 集成制动控制模块主缸弹簧断裂（疲劳）；</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="45%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>制动踏板行程过大</p> 
+                        
+                     </td>  
+                     
+                     <td width="55.00000000000001%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>内部泄露</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">旁路状况测试</span> 
+               
+            </p>  
+            
+            <p class="p">观察集成制动控制模块储液壶液面。如果在踩制动踏板几次后，制动液面保持不变，则依下述在进行制动作用时测量车轮向后转动所需的扭矩。</p>  
+            
+            <ol class="num"> 
+               
+               <li> 
+                  
+                  <p>挂空挡，举升汽车。</p>  
+                  
+                  <p>请参见 
+                     举升 
+                     
+                  </p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>以445 N的压力踩制动踏板并保持大约15 s。在制动仍然起作用的情况下给车轮施加10.1 N.m的扭矩。如果有任何一个车轮发生转动，则更换集成制动控制模块。</p> 
+                  
+               </li> 
+               
+            </ol> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

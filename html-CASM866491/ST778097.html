@@ -1,0 +1,174 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="控制器更换后操作流程"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="ST778097"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>控制器更换后操作流程</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="ST778097">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST778097">控制器更换后操作流程</h3>
+         
+         
+         <div class="body"> 
+            
+            <div class="section">
+               <h3 class="title topictitle1">软件刷写</h3> 
+               
+               
+            </div>
+            
+            
+            <p class="p">1、打电话*#*或者*#*#888进入车机工厂工程模式→打开FOTA工程模式→选择员工登录或者售后登录（需要有权限的员工账号登录或者售后账号登录）</p>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474112.png" alt="MP474112"></img></div>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474170.png" alt="MP474170"></img></div>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474115.png" alt="MP474115"></img></div>  
+            
+            <p class="p">2、点击进入售后服务→点击智能换件→确认换件信息（控制器选C3B，硬件件号输入3609360-PT301)→确认软件版本信息点击开始刷写（刷写完成后退出即可）</p>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474176.png" alt="MP474176"></img></div>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474177.png" alt="MP474177"></img></div>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474180.png" alt="MP474180"></img></div>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474181.png" alt="MP474181"></img></div>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP474182.png" alt="MP474182"></img></div>  
+            
+            <div class="section">
+               <h3 class="title topictitle1">通过诊断仪写入VIN</h3> 
+               
+               
+               <p class="p">1、连接好诊断仪后依次点击到对应车型的目录→点击中央计算机C3B→诊断数据版本→特殊功能</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP474187.png" alt="MP474187"></img></div>  
+               
+               <p class="p">2、点击写入VIN→输入车辆17位VIN码</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP474188.png" alt="MP474188"></img></div> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">通过诊断仪写入配置字</h3> 
+               
+               
+               <p class="p">1、连接好诊断仪后进入对应车型目录→点击中央计算机C3B→点击诊断数据版本→点击特殊功能→点击车型配置→选择对应车型配置</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP474260.png" alt="MP474260"></img></div> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">控制器更换后TUID绑定</h3> 
+               
+               
+               <p class="p">1、车辆更换完新域控后，按照售后维修诊断仪使用指导，连接好诊断仪，进入对应车型目录后选择“中央计算机C3B”，点击进去。</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP474005.png" alt="MP474005"></img></div>  
+               
+               <p class="p">2、进入域控后选择“诊断数据版本”→“读数据流”→“读常规数据→“TUID号””，点击进去，记下TUID号，再到车联网客服系统上进行设备更换；</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP474012.png" alt="MP474012"></img></div>  
+               
+               <p class="p">3、登录进入车联网客服系统后，输入更换域控车辆的车架号（VIN），点击搜索；</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP374248.png" alt="MP374248"></img></div>  
+               
+               <p class="p">4、进入后，点击“设备更换”，选择C3B_J6M，点击“更换”；</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP374249.png" alt="MP374249"></img></div>  
+               
+               <p class="p">7、进入后，在“新设备TUID”处输入前面从诊断仪上读出来的完整TUID，点击查询，下方会显示一行“新设备状态：正常”，点击“下一步”；</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP374250.png" alt="MP374250"></img></div>  
+               
+               <p class="p">8、按照提示完成车端新域控的换装，换装完成后点击“下一步”；</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP374251.png" alt="MP374251"></img></div>  
+               
+               <p class="p">9、进入后，点击“获取验证码”，将收到的验证码输入进去，点击“提交”即可。</p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP374252.png" alt="MP374252"></img></div> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">INS杆臂值写入（该步骤适用于2026.6.30之前生产下线的车辆，2026.6.30之后生产下线的车辆不需要此步骤）</h3> 
+               
+               
+               <p class="p">1、进入中央计算机：ssh root@192.168.2.16 密码：CQCATech@J6M#2025， 进入中央计算机后cd /map;</p>  
+               
+               <p class="p">2、 新开一个窗口adb push D:\ota_demo_uart_MVT\ota_demo_uart_MVT /map;（这里的路径是升级包放置在本地的路径，升级包需要提前下载存放在本地，升级包下载请联系对应售后服务人员）</p>  
+               
+               <p class="p">3、在控制器窗口赋能:chmod 777 ./ota_demo_uart_MVT/build/up.sh;</p>  
+               
+               <p class="p">4、写杆臂值cd ./ota_demo_uart_MVT/build目录下，输入命令chmod 777 ./216.sh 输入命令./216.sh；正常刷完会显示杆臂值数据，如不正常显示输入：tail -f /dev/ttyS1 然后printf
+                  "AGGETINSCFG" &gt;&gt;/dev/ttyS1
+               </p>  
+               
+               <div class="imagecenter"><img width="50%" src="image/MP474212.png" alt="MP474212"></img></div> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">视觉+激光标定</h3> 
+               
+               
+            </div>
+            
+            
+            <p class="p">1、更换控制器以后按照售后标定手册进行视觉+激光标定即可</p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

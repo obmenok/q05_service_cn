@@ -1,0 +1,238 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="故障现象与诊断"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>故障现象与诊断</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576867">故障现象与诊断</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">通用设备</span> 
+               
+            </p>  
+            
+            <p class="p">诊断仪，万用表、笔记本电脑、CAN数据分析软件和录制设备（例如：周立功或CANOE ）、插针线束、Type-c接口的USB数据线</p>  
+            
+            <p class="p"></p>  
+            
+            <p class="p">警告：</p>  
+            
+            <p class="p">1、 拆卸侧向毫米波雷达总成后，同车左右不能互换，不能从一辆车安装到另外一辆车上；</p>  
+            
+            <p class="p">2、 如安装位置偏移（如车身结构、支架机械变形），必须校准后，重新按照售后标定程序重新标定；</p>  
+            
+            <p class="p">维修时，应该在车辆点火状态保持关闭状态后等待时间不少于5分钟。</p>  
+            
+            <p class="p">3、 如果车辆进行了拆卸保险杠的操作或重新拆装雷达的操作，需要按照售后标定程序重新对雷达进行标定。</p>  
+            
+            <div class="section">
+               <h3 class="title topictitle1">检查与确认</h3> 
+               
+               
+               <p class="p">1. 确认用户问题，做好拍照或视频记录。</p>  
+               
+               <p class="p">1）故障发生的时间、地点、天气情况，以及车辆配置；</p>  
+               
+               <p class="p">2）本车状态，如仪表显示故障信息、声音报警、异响等；</p>  
+               
+               <p class="p">3）周围环境和道路情况（如车辆前方及邻车道车辆情况，是否有明显障碍物、路牌等）；</p>  
+               
+               <p class="p">4）有无更换整车零部件情况。</p>  
+               
+               <p class="p">2. 目视检查是否有明显的机械或电气损坏的痕迹。</p>  
+               
+               <p class="p">3. 目视检查是否有明细的碰撞变形痕迹，控制器正前方是否被异物遮挡，包含表面结冰、附着灰尘或泥土。</p>  
+               
+               <p class="p">目视检查表：</p>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>机械部分</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>电气部分</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>侧向毫米波雷达总成</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>线束及接插件</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>安装支架</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>保险</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>前后保杠</p> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>侧向毫米波雷达总成</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+               <p class="p">4. 用手检查侧向毫米波雷达总成安装是否松动、卡扣是否破裂、雷达及支架是否损坏。</p>  
+               
+               <p class="p">5. 如果目视检查通过，用诊断仪读取侧向毫米波雷达总成及关联控制器（C3B）的版本信息、历史故障码、当前故障码，并参考故障症状表进行维修。</p>  
+               
+               <p class="p">警告：相关系统如VIU、IBCU、EPS、C3B因故进行换件或更新软件，必须按照相应系统的维修/维护方法进行正确的操作，清除侧向毫米波雷达总成系统故障码，并实车确认并线辅助系统功能正常。</p>  
+               
+               <p class="p">6. 问题发生或复现时，可按“紧急录制”记录数据辅助分析。</p>  
+               
+               <p class="p">7. 问题无法定位时，录制CANFD数据（ADCCCAN，数据格式 .blf或.asc）辅助分析。</p>  
+               
+               <p class="p">8. 满足以下条件，才可以考虑更换雷达硬件：</p>  
+               
+               <p class="p">1) 目测硬件明显损坏；</p>  
+               
+               <p class="p">2) 满足故障“故障症状表”中硬件更换条件；</p>  
+               
+               <p class="p">3) 满足“DTC故障码列表及简单排查方法”中硬件更换条件；</p>  
+               
+               <p class="p">4) 根据“故障症状表”和“DTC故障码列表及简单排查方法”完成排查后故障仍未消除，ABA互换验证后“故障跟随雷达”，可以更换雷达硬件。</p>  
+               
+               <p class="p">9、在维修后保险杠时，允许对侧向毫米波雷达总成对应的保险杠区域以外进行维修。为避免干扰侧向毫米波雷达总成，对侧向毫米波雷达总成对应的保险杠区域内维修请遵循以下要求：</p>  
+               
+               <p class="p">1) 切勿在侧向毫米波雷达总成对应的保险杠区域内执行贴膜、添加塑料过滤器、塑性焊接或合订等。</p>  
+               
+               <p class="p">2) 如果保险杠漆面破损需要补漆作业，在补漆前必须清除侧向毫米波雷达总成区域内的所有车漆，保证重新喷漆区域内的保险杠漆膜厚度均匀且在70~110um内。</p>  
+               
+               <p class="p">3) 车漆厚度：使用塑料专属测量工具，如PosiTector200或PhaseIIUTG-2900超声波测厚仪（可根据现场实际情况选择，保障精度满足1um即可）。</p>  
+               
+               <p class="p">4) 如果为保险杠重新喷漆导致侧向毫米波雷达总成区域内的薄膜厚度大于110 um，需清除侧向毫米波雷达总成区域中的全部车漆，重新喷漆。</p>  
+               
+               <p class="p">注意：清除侧向毫米波雷达总成区域内的所有车漆时，避免清除侧向毫米波雷达总成区域内的保险杠基材，清除该区域中的保险杠基材可能导致侧向毫米波雷达故障。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">常见故障排查</h3> 
+               
+               
+            </div>
+            
+            
+            <p class="p">后视镜指示灯常亮、仪表故障显示为“角雷达遮挡”：首先检查车尾雷达位置是否存在加装件或喷涂，是否有泥土/冰雪覆盖，如有，则 必须消除遮挡物后，重新下电后，再确认故障是否消除；</p>  
+            
+            <p class="p">后视镜指示灯常亮、仪表故障显示为“角雷达故障”，目视检查车尾雷达位置机械碰撞或变形情况，雷达是否正确安装在支架限位内， 如有则修复变形并确认雷达正确卡装到位后，再按照“侧向毫米波雷达总成标定方法”执行</p>  
+            
+            <p class="p">后视镜指示灯常亮、仪表故障显示为“角雷达故障”，目视检查车尾雷达位置机械碰撞或变形情况，雷达是否正确安装在支架限位内， 如有则修复变形并确认雷达正确卡装到位后，再按照“侧向毫米波雷达总成标定方法”执行；</p>  
+            
+            <p class="p">雷达致盲：当雷达表面被泥土或加装物等遮挡，导致不能正常探测目标时，控制器在满足系统工作条件后发出雷达致盲信号，用于告知 用户；同时功能降级，需要到清除雷达附近的遮挡物或维修点检修排查；</p>  
+            
+            <p class="p">在生产装配及车辆使用过程中会带来水平安装角的误差，若无法对该误差进行修正，会对雷达的探测结果造成影响；当安装误差超出±3° 之外时，会导致感知性能变差，从而影响雷达性能；雷达基于自身探测逻辑会报出雷达失调故障，需要到维修点检修排查，位置校正后，
+               再按照“侧向毫米波雷达总成标定方法”执行；
+            </p>  
+            
+            <div class="section">
+               <h3 class="title topictitle1">故障确认</h3> 
+               
+               
+               <p class="p">将各功能开关开启，功能经过实车测试却不正常，应视为故障，此时可通过仪表显示故障信息，并可通过诊断仪读取故障码进一步确认故障。</p>  
+               
+               <p class="p">警告：相关系统如VCU、IBCU因故进行换件或更新软件，必须按照相应系统的维修/维护方法进行正确的操作，清除侧向毫米波雷达故障码，并实车确认侧向毫米波雷达功能正常。</p> 
+               
+            </div>
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

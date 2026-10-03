@@ -1,0 +1,987 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="行驶跑偏问题检查"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="ST576248"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>行驶跑偏问题检查</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="ST576248">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576248">行驶跑偏问题检查</h3>
+         
+         
+         <div class="body"> 
+            
+            <div class="section">判定方法</div>
+            
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>操作规范</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>判断标准</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1）确定一条平直、干燥、硬实、无明显颠簸或起伏的道路用于检查，同向行驶车道数量≥2，以保证跑偏情况下车辆仍能安全行驶。</p>  
+                        
+                        <p>2）速度达到并保持判断标准中的速度±2km/h，同时调整方向盘角度使车辆对准参考线（如车道分隔标线）直线行驶，注意此处不应通过肉眼观察方向盘居中位置行驶。</p>  
+                        
+                        <p>3）双手轻扶方向盘，保持速度稳定，微调方向盘，避免大角度修正方向盘，找到使车辆直线行驶的方向盘角度，并稳定该角度匀速行驶。</p>  
+                        
+                        <p>4）注意安全驾驶，直至车辆跑偏超过标准或行驶完标准要求的距离。</p>  
+                        
+                        <p>5）沿相同车道行驶，重复步骤2-4三次。</p>  
+                        
+                        <p>6）在行驶条件允许的情况下，沿同一车道反方向行驶，重复步骤2-5，若跑偏方向与前述相反，说明检查受道路左右方向倾斜干扰，应重新挑选道路检查。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>80KM/h行驶8s，左右偏移量超出1车道（约3.7m），且车辆始终朝左（或始终朝右）偏移，即视为跑偏，需要返修。</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p">若按照上述方法检查未判断为跑偏，但存在如下现象时处理方法为：</p>  
+            
+            <ol class="num"> 
+               
+               <li> 
+                  
+                  <p>加速行驶车辆异常偏离行驶轨迹，检查动力传递至驱动轮过程涉及的零件是否存在变形等问题，造成左右驱动轮力矩差异。</p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>制动时车辆异常偏离行驶轨迹，检查左右两侧制动系统是否存在异常，造成左右轮制动力矩差异。</p> 
+                  
+               </li>  
+               
+               <li> 
+                  
+                  <p>方向盘居中后车辆偏离行驶轨迹，重新调整四轮定位并标定EPS转角传感器，具体方法参考下方A.3。</p> 
+                  
+               </li> 
+               
+            </ol>  
+            
+            <div class="section">维修步骤 
+               
+               <p class="p">针对确认为行驶跑偏车辆，可能的故障原因为：</p> 
+               
+            </div>
+            
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="20%" class="greenCell" colspan="4" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查项</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查及维修方法</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="3" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>基本行驶状态</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="3" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>轮胎气压</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>所有轮胎气压应符合轮胎气压指示标牌上对应规格的满载气压要求，且差值小于10kpa或0.1bar，如不满足则重新充气。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>左右车轮的型号、品牌、花纹</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A.2.1 如果使用单导向轮胎，首先检查并调整轮胎外侧面朝向车的外侧。 A.2.2 对换左右车轮 A.2.3 如果左右车轮状态不一致，为左右侧更换状态一致的轮胎、车轮</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A.3</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>四轮定位，EPS中位</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <div class="imagetable"><img width="50%" src="image/MP346480.png" alt="MP256977"></img></div>  
+                        
+                        <p>A.3.1 如果方向盘分别向左右转动极限位置处的角度差异大（≥12°）的，应先重新安装方向盘至正确位置。</p>  
+                        
+                        <p>A.3.2 检查四轮定位：</p>  
+                        
+                        <p>1）将车辆正确停放在专用的四轮定位设备上，摆正车辆及轮胎，避免倾斜或者偏离设备中心位置停放；</p>  
+                        
+                        <p>2）测试过程中，只有轮胎与设备平面接触，不得举升其他车辆部位；</p>  
+                        
+                        <p>3）按照设备使用说明正确操作；</p>  
+                        
+                        <p>4）转动方向盘时，应确保前后车轮相对于设备平面可以自由运动而不产生轮胎变形。</p>  
+                        
+                        <p>A.3.3 调整四轮定位：</p>  
+                        
+                        <p>1）调整目标为符合设计标准且左右基本对称。</p>  
+                        
+                        <p>2）将方向盘在居中位置处锁定；调整前后轮定位参数再解锁方向盘。</p>  
+                        
+                        <p>3）如外倾为可调设计的，先调整外倾再调整前束；如前轮外倾为不可调设计，按照附表3.1的方法进行调整。</p>  
+                        
+                        <p>4）调整前束时，应用两个扳手分别夹紧螺纹配合副的两端，在旋转近轮胎端的同时，另一端应保持固定位置，避免被同时旋动。</p>  
+                        
+                        <p>5）解锁方向盘，并重新检测，确保调整后的四轮定位参数调整目标。</p>  
+                        
+                        <p>A.3.4 重新跑偏检查，确定维持车辆直线行驶的方向盘角度，停稳车辆后，在此角度下标定EPS转角传感器（HPS配置车辆除外）。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="3" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>零部件状态</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="26" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>车轮</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="4" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.1.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>轮胎磨损过渡或异常磨损、</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>为左右侧更换状态一致的轮胎验证</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.1.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>车轮变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>为左右侧更换状态一致的车轮验证</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.13</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>轮胎鼓包、开裂</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>为左右侧更换状态一致的轮胎验证</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.1.4</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>转动受限</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.1.4.1 检查轮毂轴承，如有异常则更换排查 B.1.4.2 检查非制动状态下，制动器卡钳是否与制动盘贴合，如有异常则更换排查</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>驱动轴</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.2.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如有肉眼可见的异常则更换排查</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.2.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>花键、轴承等松旷卡滞</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如有明显卡滞异常，更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.3</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>摆臂</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="4" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.3.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如有肉眼可见的异常则更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.3.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>球头松旷或卡滞</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>用力晃动摆臂与转向节连接处球头，左右侧对比，如单侧明显卡滞、异响或松旷异常，更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.3.3</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>橡胶衬套开裂变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如有肉眼可见的异常则更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.3.4</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>液压衬套开裂漏油</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如有肉眼可见的异常导致液压衬套功能失效的，更换排查</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.4</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>转向器</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p></p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.4.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如有肉眼可见的异常则更换排查</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.4.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>球头松旷或卡滞</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>用力晃动转向器与转向节连接处球头及侧拉杆与齿条连接处球头，左右侧对比，如单侧明显卡滞、异响或松旷异常，更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.5</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>弹簧</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>用尺测量轮眉距离车轮或地面的高度，如左右侧差异超过20mm，则先从较低一侧开始更换弹簧排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" rowspan="5" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.6</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>减振器</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.6.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查与转向节连接处的支架，活塞杆，储油桶处，如有肉眼可见的异常则更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.6.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>阻尼力异常</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>动态检查，左右侧对比，如单侧阻尼力明显过小或过大，或运动卡滞等异常，更换排查</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.6.3</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>上安装座轴承转动卡滞</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>固定减振器和安装座其中的一端，转动另一端，左右侧对比，如单侧明显卡滞异常，更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.6.4</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>上安装座橡胶衬套开裂变形</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如有肉眼可见的异常则更换排查。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.7</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>前副车架总成</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.7.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>前副车架与车身安装点是否拆装过，拆装后是未装配到位，存在偏左（或者偏右）</p> 
+                        
+                     </td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>如副车架拆装过，并如有肉眼可见的异常则按副车架装配要求重新装配前副车架，参考 
+                           前副车架总成 
+                           
+                        </p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            ‍ 
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" class="greenCell" colspan="3" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>前轮外倾角调整方法</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>A</p> 
+                        
+                     </td>  
+                     
+                     <td width="33.33333333333333%" colspan="2" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>操作步骤：</p>  
+                        
+                        <p>1）举升车辆</p>  
+                        
+                        <p>2）拆卸前轮</p>  
+                        
+                        <p>3）若转向节与制动器的连接螺栓为M14，则更换09103-14020-S345；若转向节与制动器的连接螺栓为M16，则更换为09103-16009-S345;装配螺栓螺母至制动器相对支柱能够晃动为止。</p>  
+                        
+                        <p>4）若需减小外倾角，参考B.1；若需增加外倾角，参考B.2；</p>  
+                        
+                        <p>5）安装前轮，先用较小力矩均匀渐进的安装轮胎螺母，避免因单个螺母完全拧紧后再拧其他螺母而造成轮胎和制动器安装面不贴合，确认车轮与制动器平面贴合后，打紧扭矩至设计值±10N.m</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.1</p> 
+                        
+                     </td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>减小前轮外倾角：</p>  
+                        
+                        <p>1）制动器上端施加往内侧方向的推力，同时在在制动器下端施加往外侧方向的推力，如图示意方向；</p>  
+                        
+                        <p>2）保持制动器上端向内旋转的同时，依次按照先1后2的顺序打紧安装螺栓，打紧扭矩至设计值±20N.m，并打色标</p> 
+                        
+                     </td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <div class="imagetable"><img width="50%" src="image/MP346481.png" alt="MP256980"></img></div>  
+                        
+                        <div class="imagetable"><img width="50%" src="image/P255231.PNG" alt="P248403"></img></div> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>B.2</p> 
+                        
+                     </td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>增加前轮外倾角：</p>  
+                        
+                        <p>1）制动器上端施加往外侧方向的推力，同时在在制动器下端施加往内侧方向的推力，如图示意方向；</p>  
+                        
+                        <p>2）保持制动器上端向外旋转的同时，依次按照先1后2的顺序打紧安装螺栓，打紧扭矩至设计值±20N.m，并打色标</p> 
+                        
+                     </td>  
+                     
+                     <td width="33.33333333333333%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <div class="imagetable"><img width="50%" src="image/P255233.PNG" alt="P248400"></img></div> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

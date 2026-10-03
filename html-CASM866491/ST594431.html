@@ -1,0 +1,1660 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="电源补给系统电气故障排查"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="ST594431"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>电源补给系统电气故障排查</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="ST594431">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST594431">电源补给系统电气故障排查</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">注意事项：</span> 
+               
+            </p>  
+            
+            <p class="p">1、前提条件：</p>  
+            
+            <p class="p">（1）电源补给系统交流输入接插件、HV高压直流端子、DCDC接插件、低压信号接插件连接良好，无断裂、松脱、退针情况；（2）高压、低压线束线皮无破损。</p>  
+            
+            <p class="p">2、故障诊断：</p>  
+            
+            <p class="p">（1）满足前提条件，ON档情况下，整车能够正常上高压，整车馈电无法正常行驶，诊断仪读取电源补给系统相应DTC码，清除历史故障DTC码，重新上下电，诊断仪仍能读取到电源补给系统相应故障DTC码。参考如下故障排查方法，确认电源补给系统故障后更换电机控制器；</p>  
+            
+            <p class="p">（2）满足前提条件，慢充场景，慢充充电枪正常连接，充电桩无异常，刷卡后整车无法充电，诊断仪读取电源补给系统相应DTC码，清除历史故障DTC码，拔插充电枪后，诊断仪仍能读取到电源补给系统相应故障DTC码。参考如下故障排查方法，确认电源补给系统故障后更换电机控制器；</p>  
+            
+            <p class="p">（3）满足前提条件，放电场景，放电枪正常连接，用电器正常连接后无法工作，诊断仪读取电源补给系统相应DTC码，清除历史故障DTC码，用电器重新拔插后，诊断仪仍能读取到电源补给系统相应故障DTC码。参考如下故障排查方法，确认电源补给系统故障后更换电机控制器；</p>  
+            
+            <p class="p">3、电源补给系统故障列表见附表</p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8017</span>  
+               <span class="ph b">（充电桩）交流输入过压故障</span>：
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有P1A8017？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否不做处理。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、 检查交流充电桩</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车重新上下电，更换交流充电桩，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否用诊断仪读取故障数据，如果是P1A8017，进入步骤3；如果不是P1A8017，根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A8016 (充电桩)交流输入欠压故障</span>：参照P1A8017进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8619(充电桩)交流输入电流过流</span> ：参照P1A8017进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8416</span>  
+               <span class="ph b">（电池包）逆变输入欠压：</span>参照P1A9116进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8417</span>  
+               <span class="ph b">充电机逆变直流输入过压：</span>参照P1A9116进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A9717</span>  
+               <span class="ph b">（电池包）逆变输入过压：</span>参照P1A9116进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A9116</span> （电池包）高压侧输入欠压 
+               <span class="ph b">：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，用诊断仪读取故障数据。是否有P1A9116？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查动力电池</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，挂D挡，踩油门，用诊断仪读取故障数据，是否有整车其他欠压故障？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是排查动力电池。→否 进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，整车重新上电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前故障码。是否有P1A9116？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤4。→否 完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">U1B8000 总线CAN buss off</span>：
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，整车重新下电上电，用诊断仪读取故障数据。是否有U1B8000？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查低压接插件引脚电压</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车OFF档下电，拔掉低压信号接插件，用万用表测量低压线束针脚22与针脚23，是否出现短路？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换整车低压线束。→否进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">U1B8087 BMS 190通讯异常</span> ：
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有U1B8087？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、重新上下电</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，等待10S后重新上电，再下电。重复上下电5次。B.插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、检查BCU</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.检查整车BCU及线束，是否有问题？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换BCU及线束。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤5。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">U1B8487 VCU 3FC报文通信异常</span>  
+               <span class="ph b">：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，用诊断仪读取故障数据。是否有U1B8487？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、重新上下电</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，等待10S后重新上电，再下电。重复上下电5次。用诊断仪读取故障数据。是否有U1B8487？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">3、检查VCU及线束</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.检查整车VCU及线束，是否有问题？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换VCU及线束。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，整车重新上电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前故障码。是否有U1B8487？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤5。→否 完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A9113</span>  
+               <span class="ph b">绝缘检测：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上放电枪，外接用电器，用诊断仪读取故障数据。是否有P1A9113？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查慢充口</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，检查慢充口是否有水？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是擦干水。→否 进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、检查整车线束</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，拔掉OBC接插件母端，用万用表测量整车OBC线束L和N，是否出现短路？并检查线束是否有破损？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换整车OBC线束。→否进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤5。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A9213 CP电压异常</span> ：
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有P1A9213？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查交流充电桩</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换交流充电桩，插上慢充枪，刷卡，电源补给系统是否正常工作？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是不做处理。→否 进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、检查低压接插件引脚电压</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车OFF档下电，拔掉低压信号接插件，用万用表测量低压线束针脚8与电控壳体，是否通路？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换整车低压信号线束。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤5。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A9313 CP</span>  
+               <span class="ph b">频率异常</span>：参照P1A9213进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8216</span>  
+               <span class="ph b">OBC直流输出欠压故障</span>：
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有P1A8216？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查动力电池</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，挂D挡，踩油门，整车是否能够正常行驶？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤4。→否 进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、测量直流母线高压线束</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车OFF档下电，拆开电机控制器总成直流母线盖板，用万用表测量直流母线正极和负极是否断路？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换直流母线高压线束。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤5。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A8217 OBC直流输出过压故障</span>：参照P1A8216进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8117</span> KL30 
+               <span class="ph b">过压保护：</span> 
+               
+            </p>  
+            
+            <p class="p"> 
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">A. 整车重新上下电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前对应故障码。是否有P1A8117？</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否完成维修。</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查小电瓶</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，断开小电瓶正负极，用万用表检查小电瓶电压是否高于阈值V？</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">→是更换小电瓶。→否进入步骤3。</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，整车重新上电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前故障码。是否有P1A8117？</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤4。→否 完成维修</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术4、寻求技术支持支持</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8116</span>  
+               <span class="ph b">KL30欠压保护：</span>参照P1A8117进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8719 OBC</span>  
+               <span class="ph b">直流侧输出电流过流</span>：
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有P1A8719？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、测量直流母线高压线束</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车OFF档下电，拆开电机控制器总成直流母线盖板，用万用表测量直流母线正极和负极是否出现短路？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换直流母线高压线束。→否 进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A8411</span>  
+               <span class="ph b">OBC直流输出短路故障</span>：参照P1A8719进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8F98 OBC过温关机保护:</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有P1A8F98？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是至步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检测整车冷却水泵是否正常工作</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.驾驶车辆正常行驶2km，使电机控制器总成升温，观察整车是否报过温故障？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是 进入步骤3。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换冷却水泵</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换冷却水泵，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否 进入步骤5。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A8E98 OBC过温降额保护:</span>参照P1A8F98进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8A98</span>  
+               <span class="ph b">OBC逆变过温关机：</span>参照P1A8F98进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8B98</span>  
+               <span class="ph b">OBC逆变过温降额：</span>参照P1A8F98进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1ACB4B DCDC</span>  
+               <span class="ph b">过温降额保护：</span>参照P1A8F98进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1ACA4B DCDC</span>  
+               <span class="ph b">过温关机保护：</span> 参照P1A8F98进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1ACD40 OBC</span>  
+               <span class="ph b">温感回路检测:</span>参照P1A8F98进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1ACC40 DCDC</span>  
+               <span class="ph b">温感回路检测：</span>参照P1A8F98进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A9016</span>  
+               <span class="ph b">OBC逆变交流输出过压：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上放电枪，接用电器，用诊断仪读取故障数据。是否有P1A9016？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查用电器</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.插上放电枪，更换小功率电器，用诊断仪读取故障数据。是否有P1A9016？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤3。→否 不做处理。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上放电枪，接用电器，用诊断仪读取故障数据。是否有P1A9016？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">是进入步骤4。→否 完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1A8219</span>  
+               <span class="ph b">OBC逆变交流输出过流：</span>参照P1A9016进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1A8711</span>  
+               <span class="ph b">OBC逆变交流输出短路：</span>参照P1A9016进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1AC113</span>  
+               <span class="ph b">高压互锁故障：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，整车重新下电上电，用诊断仪读取故障数据。是否有P1AC113？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查整车OBC线束</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，检查OBC接插件连接是否松脱？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是重新插拔OBC接插件母端。→否 进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、检查OBC互锁回路</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，拔掉OBC接插件母端，用万用表测量电机控制器OBC接插件高压互锁1、2，是否出现断路？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤4。→否更换整车OBC线束。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？→是完成维修。→否 进入步骤5。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P360416 DCDC</span>  
+               <span class="ph b">低压输出侧输出欠压：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A. 整车重新上下电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前对应故障码。是否有P360416？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、 检查小电瓶</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，断开小电瓶正负极，用万用表检查小电瓶电压是否低于8.5V？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换小电瓶。→否进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，整车重新上电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前故障码。是否有P360416？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤4。→否 完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1AC317 DCDC</span>  
+               <span class="ph b">低压输出侧输出过压：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A. 整车重新上下电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前对应故障码。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">是否有P1AC317？→是进入步骤2。→否完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、 检查小电瓶</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，断开小电瓶正负极，用万用表检查小电瓶电压是否高于16V？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换小电瓶。→否进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，整车重新上电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前故障码。是否有P1AC317？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤4。→否 完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1AC519 DCDC</span>  
+               <span class="ph b">输出过流：</span>参照P1AC615进行排查
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1AC613 DCDC</span>  
+               <span class="ph b">低压输出侧硬件开路故障：</span>  
+               <span class="ph b">参照P1AC615进行排查</span> 
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1AC615 DCDC</span>  
+               <span class="ph b">低压输出侧输出短路故障：</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A. 整车重新上下电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前对应故障码。是否有P1AC615？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、 检查小电瓶</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车OFF档下电，断开DCDC输出正负极，用万用表检查小电瓶正负极是否短路？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换小电瓶。→否进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、检查整车线束</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车OFF档下电，断开DCDC输出正负极，用万用表检查12V线束正负极是否短路？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换整车12V低压线束。→否 进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">4、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，整车重新上电，在ON档下，用诊断仪进入整车控制器，清除历史对应故障码，读取当前对应故障码。是否有P1AC615？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤5。→否 完成维修。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">5、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1ACA40 OBC</span>  
+               <span class="ph b">内部SCI通讯丢失:</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有P1ACA40？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、重新上下电</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车下电，等待10S后重新上电，再下电。重复上下电5次。B.插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否进入步骤3。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">3、更换电源补给系统</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.更换电源补给系统，插上慢充枪，刷卡，电源补给系统是否能够正常充电？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是完成维修。→否进入步骤4。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">4、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1ACA40 DCDC</span>  
+               <span class="ph b">内部SCI通讯故障：参照P1ACA40 进行排查</span> 
+               
+            </p>  
+            
+            <p class="p"> 
+               <span class="ph b">P1ACD4B</span>  
+               <span class="ph b">充电插座过温降额</span>：
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">测试条件</td>  
+                     
+                     <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          ">细节/结果/措施</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">1、读取对应故障码</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.整车上电，用诊断仪进入整车控制器，清除历史故障码，插上慢充枪，刷卡，用诊断仪读取故障数据。是否有P1ACD4B？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是进入步骤2。→否根据对应故障码采取相应排查方法。</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" rowspan="2" valign="&#xA;            top&#xA;          ">2、检查充电插座线束总成</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">A.检查充电插座线束总成，是否有问题？</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">→是更换充电插座线束总成。→否 进入步骤3</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">3、寻求技术支持</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">联系售后技术支持。</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p"> 
+               <span class="ph b">P1ACC4B</span>  
+               <span class="ph b">充电插座过温关机:</span>参照P1ACD4B进行排查
+               
+            </p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

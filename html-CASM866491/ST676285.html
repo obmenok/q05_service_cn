@@ -1,0 +1,105 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="标定方法"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>标定方法</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST676285">标定方法</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"> 
+               <span class="ph b">步骤一：</span>通过诊断仪开启标定
+               
+            </p>  
+            
+            <p class="p">开启标定流程：进入诊断仪-选择全新Q05-左后毫米波雷达总成RLR/右后毫米波雷达总成RLR-特殊功能-角雷达标定-执行。执行成功，对应侧的后视镜盲点灯会持续闪烁，若失败，需读取故障码进行故障判断，处理后再执行上述操作。</p>  
+            
+            <p class="p">注意：若需要两颗角雷达同时标定，可以在单侧角雷达拉起标定后，可以直接结束，上述程序只是开启角雷达标定的工具，终止命令不会结束角雷达的标定状态，对另一侧雷达进行相同操作，两侧盲点灯都进入闪烁状态即可进行路数标定。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">步骤二：</span> 路试标定
+               
+            </p>  
+            
+            <p class="p">在进入读取校准结果界面后，开始驾驶车辆，监控进度条。</p>  
+            
+            <p class="p">驾驶要求：</p>  
+            
+            <p class="p">车速：30~60km/h</p>  
+            
+            <p class="p">纵向加速度：-1~1m/s2（速度控制平稳）</p>  
+            
+            <p class="p">横摆角速度：-0.05~0.05rad/s2（转向控制平稳）</p>  
+            
+            <p class="p">曲率半径：0.001m（基本走直线）</p>  
+            
+            <p class="p"> 
+               <span class="ph b">步骤三：</span> 
+               
+            </p>  
+            
+            <p class="p">进度条达到100%时（对应侧的后视镜盲点灯从闪烁状态变为熄灭状态），如果水平、垂直校准偏差角均小于3°，直接确认完成校准；如果校准偏差角大于等于3°，需要拆除保险杠，确认侧向毫米波雷达总成支架是否损坏。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">步骤四：</span> 
+               
+            </p>  
+            
+            <p class="p">读取故障码，清除故障码，重启车辆。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">步骤五：</span> 
+               
+            </p>  
+            
+            <p class="p">故障消除后，校准完成。</p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

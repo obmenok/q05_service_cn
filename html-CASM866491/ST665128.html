@@ -1,0 +1,256 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="座椅按摩功能失效"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="ST665128"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>座椅按摩功能失效</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="ST665128">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST665128">座椅按摩功能失效</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">屏幕无按摩显示，且按摩无功能的诊断流程：</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <thead style="font-weight: bold"> 
+                  
+                  <tr> 
+                     
+                     <th width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>测试步骤</p> 
+                        
+                     </th>  
+                     
+                     <th width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>细节/结果/措施</p> 
+                        
+                     </th> 
+                     
+                  </tr> 
+                  
+               </thead>  
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1.检查主机按摩信号发送是否正常发送。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查主机按摩信号发送是否正常发送：</p>  
+                        
+                        <p>使用CANoe设备连接车辆诊断接口；触碰座椅按摩开关，查看Bcan网络确认主机是否有按摩信号下发，确认下发信号是否正确。</p>  
+                        
+                        <p>→是，至步骤2；</p>  
+                        
+                        <p>→否，参考主机维修章节维修主机。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>2.检查座椅控制器软件是否处于异常状态。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查控制器软件是否处于异常状态：</p>  
+                        
+                        <p>断开蓄电池负极或座椅下控制器和车身线束连接接插件，进行控制器手动复位。确认复位后按摩功能是否正常运行。</p>  
+                        
+                        <p>→是，确认为控制器软件状态异常导致。</p>  
+                        
+                        <p>→否，至步骤3。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>3.检查座椅按摩功能继电器是否损坏。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查按摩功能继电器是否损坏：</p>  
+                        
+                        <p>更换按摩功能继电器，确认按摩功能是否恢复正常。</p>  
+                        
+                        <p>→是，确认为继电器损坏导致。</p>  
+                        
+                        <p>→否，至步骤4。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>4.检查座椅气泵是否损坏。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>连接外接12V电源，使用万用表检查电流及气泵运转情况。</p>  
+                        
+                        <p>→无电流，确认为气泵损坏导致。</p>  
+                        
+                        <p>→正常运转，至步骤5。</p> 
+                        
+                     </td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>5.检查座椅按摩控制器硬件是否损坏。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查控制器硬件是否损坏：</p>  
+                        
+                        <p>更换控制器，确认按摩功能是否恢复正常。</p>  
+                        
+                        <p>→是，确认为控制器硬件损坏导致，更换座椅按摩控制器。</p>  
+                        
+                        <p>→否，从其他症状查找故障原因。</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p">无按摩显示，但座垫按摩功能正常的诊断流程：</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <thead style="font-weight: bold"> 
+                  
+                  <tr> 
+                     
+                     <th width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>测试步骤</p> 
+                        
+                     </th>  
+                     
+                     <th width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>细节/结果/措施</p> 
+                        
+                     </th> 
+                     
+                  </tr> 
+                  
+               </thead>  
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>1.检查座椅控制器软件是否处于异常状态。</p> 
+                        
+                     </td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          "> 
+                        
+                        <p>检查座椅控制器软件是否处于异常状态：</p>  
+                        
+                        <p>断开蓄电池负极或座椅下控制器和车身线束连接接插件，进行座椅控制器手动复位。确认复位后按摩功能是否正常运行。</p>  
+                        
+                        <p>→是，确认为控制器软件状态异常导致。</p>  
+                        
+                        <p>→否，从其他症状查找故障原因。</p> 
+                        
+                     </td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

@@ -1,0 +1,1107 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="检查与确认"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>检查与确认</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576302">检查与确认</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">1. 证实顾客的问题。</p>  
+            
+            <p class="p">2. 目视检查明显的机械或电气故障。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">目视检查表</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">机械</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">电气</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">车轮速度传感器、车轮速度传感器齿圈</td>  
+                     
+                     <td width="50%" valign="&#xA;            top&#xA;          ">保险、连接器、线束</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+            <p class="p">3. 在进行下一步检查之前先解决发现的问题。</p>  
+            
+            <p class="p">4. 如果所观察或提出的问题的明显原因已经发现，则在进行下一个步骤之前，必须先将该原因修正。</p>  
+            
+            <p class="p">5. 如果目视检查通过，则确认故障并参考故障症状表。</p>  
+            
+            <p class="p"> 
+               <span class="ph b">通用设备</span> 
+               
+            </p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="100%" class="greenCell" valign="&#xA;            top&#xA;          ">数字式万用表</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="100%" valign="&#xA;            top&#xA;          ">诊断仪</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         <div class="topic nested1"> 
+            
+            <h3 class="title topictitle2" title="ST576302">故障现象诊断与测试</h3>
+            
+            
+            <div class="body"> 
+               
+               <p class="p"> 
+                  <span class="ph b">间歇性故障诊断流程</span>  
+                  
+                  <ul name="contents" class="ul"> 
+                     
+                     <li> 
+                        
+                        <div>
+                           <div class="wl-attention prespace postspace" data-attention-type="caution" id="d48379e111">
+                              <header>
+                                 <h2>注意</h2>
+                              </header>
+                              <div class="attention-text postspace-s wl-attention-content">1. 清除DTC。</div>
+                           </div>
+                           
+                        </div>  
+                        
+                        <p>2. 进行模拟测试。</p>  
+                        
+                        <p>3. 检查和摇动线束、接头和端子</p> 
+                        
+                     </li> 
+                     
+                  </ul>
+                  
+                  
+               </p>  
+               
+               <p class="p">当通过 DTC 检查不能确认故障，故障现象只是偶尔在使用中出现。此时应该对所有可能导致故障的线路及部件进行确认。在很多情况下，通过执行下面流程图中所示的基本检查，可快速有效地找出故障部位，特别是针对线束接头接触不良等故障。</p>  
+               
+               <p class="p">故障定义：当前未出现此故障，但历史故障诊断码记录指示该故障曾经出现。或客户报修了该故障，但因为故障与故障诊断码不相关，当前无法再现故障症状。</p>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">测试条件</span> 
+                           
+                        </td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">细节/结果/措施</span> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">1. 振动法</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>如果在一条不平整的道路上行驶时出现故障或故障情况更加严重，或者发动机/电机产生振动，请至步骤2或3。</p>  
+                           
+                           <div>
+                              <div class="wl-attention prespace postspace" data-attention-type="caution" id="d48379e171">
+                                 <header>
+                                    <h2>注意</h2>
+                                 </header>
+                                 <div class="attention-text postspace-s wl-attention-content">有几个原因都可能会导致由于汽车或发动机/电机的振动引起电气故障。检查以下各项：</div>
+                              </div>
+                              
+                           </div>  
+                           
+                           <p> 
+                              
+                              <ul name="contents" class="ul"> 
+                                 
+                                 <li> 
+                                    
+                                    <p>连接器未完全到位。</p> 
+                                    
+                                 </li> 
+                                 
+                              </ul>
+                              
+                              
+                              <ul name="contents" class="ul"> 
+                                 
+                                 <li> 
+                                    
+                                    <p>线束没有足够间隙。</p> 
+                                    
+                                 </li> 
+                                 
+                              </ul>
+                              
+                              
+                              <ul name="contents" class="ul"> 
+                                 
+                                 <li> 
+                                    
+                                    <p>线束的布置横跨支架或运动部件。</p> 
+                                    
+                                 </li> 
+                                 
+                              </ul>
+                              
+                              
+                              <ul name="contents" class="ul"> 
+                                 
+                                 <li> 
+                                    
+                                    <p>线束的布置过于接近高温零部件。</p> 
+                                    
+                                 </li> 
+                                 
+                              </ul>
+                              
+                              
+                           </p>  
+                           
+                           <div>
+                              <div class="wl-attention prespace postspace" data-attention-type="caution" id="d48379e213">
+                                 <header>
+                                    <h2>注意</h2>
+                                 </header>
+                                 <div class="attention-text postspace-s wl-attention-content">布线不正确、未适当卡紧或松动的线束都会导致接线被挤压在零部件之间</div>
+                              </div>
+                              
+                           </div>  
+                           
+                           <div>
+                              <div class="wl-attention prespace postspace" data-attention-type="caution" id="d48379e216">
+                                 <header>
+                                    <h2>注意</h2>
+                                 </header>
+                                 <div class="attention-text postspace-s wl-attention-content">连接器的接合处、振动部位以及线束穿过的位置都是需要重点检查的部位，例如：线束穿过防火墙与车身板。</div>
+                              </div>
+                              
+                           </div> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">2. 开关连接器或线束的检查方法</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 连接诊断仪到诊断接口（OBD）。</p>  
+                           
+                           <p>B. 车辆解锁上电。</p>  
+                           
+                           <p>C. 访问您正在检查的开关的数据流。</p>  
+                           
+                           <p>D. 手动打开开关。</p>  
+                           
+                           <p>E. 在监视数据流时，垂直、水平地轻轻摇动每个连接器或线束。如果数据流值不稳定，请检查是否连接不良。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">3. 传感器连接器或线束的检查方法</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 连接诊断仪到诊断接口（OBD）。</p>  
+                           
+                           <p>B. 车辆解锁上电。</p>  
+                           
+                           <p>C. 访问您正在检查的开关的数据流。</p>  
+                           
+                           <p>D. 在监视数据流时，垂直、水平地轻轻摇动每个连接器或线束。如果数据流值不稳定，请检查是否连接不良。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">4. 执行器或继电器的检查方法</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 连接诊断仪到诊断接口（OBD）。</p>  
+                           
+                           <p>B. 车辆解锁上电。</p>  
+                           
+                           <p>C. 对您所检查的执行器或继电器进行主动测试。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">5. 路试模拟故障，读取数据流</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 将诊断仪连接至诊断接口（OBD）。</p>  
+                           
+                           <p>B. 进行路试，模拟故障，同时读取数据流。如果数据流值不稳定或出现故障，请进行修理或更换零件。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+               <p class="p"> 
+                  <span class="ph b">ABS警告灯保持长亮诊断流程</span> 
+                  
+               </p>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">测试条件</span> 
+                           
+                        </td>  
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">细节 / 结果 / 措施</span> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">1. 用诊断仪访问集成制动控制模块（IBCU）</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 检查是否输出了DTC？</p>  
+                           
+                           <p>→是 根据输出的DTC进行维修。</p>  
+                           
+                           <p>→否 至步骤2。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">2. 用诊断仪访问区域控制器（VIU）</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 检查是否输出了DTC？</p>  
+                           
+                           <p>→是 根据输出的DTC进行维修。</p>  
+                           
+                           <p>→否 至步骤3。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">3. 用诊断仪访问体验驱动计算机（EDC）</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 检查是否输出了DTC？</p>  
+                           
+                           <p>→是 根据输出的DTC进行维修。</p>  
+                           
+                           <p>→否 至步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">4. 更换体验驱动计算机（EDC）</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 车辆下电，断开蓄电池负极线束</p>  
+                           
+                           <p>B. 更换EDC车机控制单元。确认系统正常</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+               <p class="p"> 
+                  <span class="ph b">集成制动控制模块诊断流程</span>  
+                  
+                  
+                  <table width="100%" border="1" frame="box" rules="all">  
+                     
+                     
+                     
+                     <tbody> 
+                        
+                        <tr> 
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          "> 
+                              <span class="ph b">测试条件</span> 
+                              
+                           </td>  
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          "> 
+                              <span class="ph b">细节 / 结果 / 措施</span> 
+                              
+                           </td> 
+                           
+                        </tr>  
+                        
+                        <tr> 
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">1. 检查蓄电池电压</td>  
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                           
+                        </tr>  
+                        
+                        <tr> 
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          "> 
+                              
+                              <p>A. 车辆上电。</p>  
+                              
+                              <p>B. 用万用表测量蓄电池电压是否正常？（标准值：9~16V）</p>  
+                              
+                              <p>→是 至步骤2。</p>  
+                              
+                              <p>→否</p> 
+                              
+                           </td> 
+                           
+                        </tr>  
+                        
+                        <tr> 
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">2.集成制动控制模块（IBCU）的电源和接地线</td>  
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                           
+                        </tr>  
+                        
+                        <tr> 
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          "> 
+                              
+                              <p>A. 拆下集成制动控制模（IBCU）块接插件；</p>  
+                              
+                              <p>B. 找到1号、14号、30号、46号引脚对应接插件线束；</p>  
+                              
+                              <p>C. 用万用表检测该线束的电压输出是否正常（标准值：9~16V）；</p>  
+                              
+                              <p>→是 供电正常。</p>  
+                              
+                              <p>→否 至步骤3。</p> 
+                              
+                           </td> 
+                           
+                        </tr>  
+                        
+                        <tr> 
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">3.利用诊断仪访问集成制动控制模块（IBCU）</td>  
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                           
+                        </tr>  
+                        
+                        <tr> 
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                           
+                           <td width="50%" valign="&#xA;            top&#xA;          "> 
+                              
+                              <p>A. 利用诊断仪访问集成制动控制模块（IBCU），对泵进行主动测试，是否可以听到泵工作的声音。</p>  
+                              
+                              <p>→是 系统正常。</p>  
+                              
+                              <p>→否 更换集成制动控制模块（IBCU）。</p>  
+                              
+                              <p>参考 
+                                 <a class="xref" href="ST576295.html">集成制动控制模块（IBCU）</a> 
+                                 
+                              </p> 
+                              
+                           </td> 
+                           
+                        </tr> 
+                        
+                     </tbody> 
+                     
+                  </table> 
+                  
+                  
+               </p>  
+               
+               <p class="p"> 
+                  <span class="ph b">轮速传感器诊断流程</span> 
+                  
+               </p>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">测试条件</span> 
+                           
+                        </td>  
+                        
+                        <td width="50%" class="greenCell" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">细节 / 结果 / 措施</span> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">1. 检查轮速传感器的安装</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 检查轮速传感器的安装是否松动？</p>  
+                           
+                           <p>→是 至步骤2。</p>  
+                           
+                           <p>→否 进行紧固。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">2. 检查轮速传感器装配间隙</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 重新装配检查轮速传感器间隙是否正常。标准值：前：0.2-1mm； 后：0.35-1.65mm</p>  
+                           
+                           <p>→是 至步骤3。</p>  
+                           
+                           <p>→否 更换轮速传感器。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">3. 测量轮速传感器零部件状态</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 拆下轮速传感器线束，检查传感器头部、接插件是否有刮痕、异物、污垢。</p>  
+                           
+                           <p>→是 清洁或更换传感器。</p>  
+                           
+                           <p>→否 至步骤4。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">4. 检查轮速传感器线束接插件端电压</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 检查四个轮速传感器线路电压是否正常</p>  
+                           
+                           <p>→是 更换轮速传感器。</p>  
+                           
+                           <p>→否 至步骤5。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">5.检查集成制动控制模块接插件至轮速传感器接插件端线束通断</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 拔出集成制动控制模块接插件，检查4、5、6、7、8、9、10、11号引脚对四个轮速传感器接插件针脚线束通断，检查线束是否正常</p>  
+                           
+                           <p>→是 至步骤6。</p>  
+                           
+                           <p>→否 更换故障线束。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">6. 检查蓄电池电压</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 车辆上电。</p>  
+                           
+                           <p>B. 用万用表测量蓄电池电压是否正常。标准值：9~ 16 V。</p>  
+                           
+                           <p>→是 至步骤7。</p>  
+                           
+                           <p>→否 更换蓄电池。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">7. 集成制动控制模块的电源和接地线</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 拆下集成制动控制模块接插件，找到1号、14号；30号、46号引脚对应接插件线束</p>  
+                           
+                           <p>B. 用万用表检测该线束的电压输出是否正常，标准值：9~16V；</p>  
+                           
+                           <p>→是 至步骤8。</p>  
+                           
+                           <p>→否 换接插件线束。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">8. 利用诊断仪访问集成制动控制模块</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 插上接插件，利用诊断仪访问集成制动控制模块，对泵进行主动测试。是否可以听到泵工作的声音？</p>  
+                           
+                           <p>→是 系统正常。</p>  
+                           
+                           <p>→否 至步骤9。</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">9. 更换集成制动控制模块（IBCU)</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="50%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>A. 更换集成制动控制模块（IBCU）。</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </div>
+            
+            
+         </div>
+         
+         
+         <div class="topic nested1"> 
+            
+            <h3 class="title topictitle2" title="ST576302">DTC诊断与测试</h3>
+            
+            
+            <div class="body"> 
+               
+               <p class="p"> 
+                  <span class="ph b">DTC诊断与测试数据流列表</span> 
+                  
+               </p>  
+               
+               <p class="p">通过读取故障诊断仪上面的“数据流列表”，不用拆卸任何零部件即可以检查开关、传感器、执行器的工作状态。在对发动机电子控制系统进行故障诊断之前，对数据的观察及分析是排除故障的第一步，这样能缩短故障排除的时间。</p>  
+               
+               <div>
+                  <div class="wl-attention prespace postspace" data-attention-type="caution" id="d48379e870">
+                     <header>
+                        <h2>注意</h2>
+                     </header>
+                     <div class="attention-text postspace-s wl-attention-content"> 
+                        
+                        <p class="p">下表中列出了正常条件下的数据，仅供参考。切勿单纯根据这些参考数值来判断某一零件是否发生故障。通常情况下可以利用工作正常的车辆与疑似故障车辆在同一状态下进行对比，以确定受诊断车辆数据在当前的状态是否属于正常。</p> 
+                        
+                     </div>
+                  </div>
+                  
+               </div>  
+               
+               <p class="p">1.连接故障诊断仪。</p>  
+               
+               <p class="p">2.车辆上电或启动。</p>  
+               
+               <p class="p">3.打开诊断仪软件&gt;汽车诊断&gt;集成制动控制模块&gt;读数据流。</p>  
+               
+               <p class="p">4.参考下表（诊断仪中有例表菜单，此处为举例说明），检查各项数据。</p>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">诊断仪显示项目</span> 
+                           
+                        </td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">部件</span> 
+                           
+                        </td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">控制范围</span> 
+                           
+                        </td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          "> 
+                           <span class="ph b">诊断说明</span> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">左前轮速</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">信号来自左前轮速传感器</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">左前轮速随车速变化</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">观察轮速变化</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">右前轮速</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">信号来自右前轮速传感器</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">右前轮速随车速变化</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">观察轮速变化</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">左后轮速</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">信号来自左后轮速传感器</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">左后轮速随车速变化</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">观察轮速变化</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">右后轮速</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">信号来自右后轮速传感器</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">右后轮速随车速变化</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">观察轮速变化</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">制动系统故障灯状态</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">信号来自集成制动控制模块</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">受控于集成制动控制模块</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">利用诊断仪和集成制动控制模块通讯时，灯可能会点亮</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">ABS警告灯状态</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">信号来自集成制动控制模块</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">受控于集成制动控制模块</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">利用诊断仪和集成制动控制模块通讯时，灯可能会点亮</td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">ESC警告灯状态</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">信号来自集成制动控制模块</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">受控于集成制动控制模块</td>  
+                        
+                        <td width="25%" valign="&#xA;            top&#xA;          ">利用诊断仪和集成制动控制模块通讯时，灯可能会点亮</td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+               <p class="p"> 
+                  <span class="ph b">动态测试</span> 
+                  
+               </p>  
+               
+               <p class="p">利用故障诊断仪进行动作测试，不用拆卸任何零部件即可以测试集成制动控制模块（IBCU）执行器的工作状态。在对集成制动控制模块（IBCU）进行相关故障诊断之前，执行动作测试是排除故障有效手段，这样能缩短故障排除的时间。</p>  
+               
+               <p class="p">1. 连接故障诊断仪。</p>  
+               
+               <p class="p">2. 车辆上电或启动。</p>  
+               
+               <p class="p">3. 打开诊断仪软件&gt;汽车诊断&gt;集成制动控制模块&gt;特殊功能。</p>  
+               
+               <p class="p">测试条件：</p>  
+               
+               <p class="p">1. 欠压时不能测试。</p>  
+               
+               <p class="p">2. 车速不能超过 3km/h。</p>  
+               
+               <p class="p">测试步骤：</p>  
+               
+               <p class="p">打开诊断仪软件&gt;汽车诊断&gt;集成制动控制模块&gt;特殊功能&gt;动态测试，按照诊断仪屏幕上的条目，逐项进行测试。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">配置字写入</span> 
+                  
+               </p>  
+               
+               <p class="p">当售后更换了集成制动控制模块零件后，须利用故障诊断仪对集成制动控制模块进行车辆配置等。</p>  
+               
+               <p class="p">1. 连接故障诊断仪。</p>  
+               
+               <p class="p">2. 车辆上电或启动。</p>  
+               
+               <p class="p">3. 打开诊断仪软件&gt;汽车诊断&gt;集成制动控制模块&gt;配置字写入，根据诊断仪屏幕上显示的选型和提示，正确停放车辆，执行“车辆配置”动作。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">故障诊断仪无法与车辆通讯诊断流程</span> 
+                  
+               </p>  
+               
+               <p class="p">1. 连接故障诊断仪。</p>  
+               
+               <p class="p">2. 车辆上电或启动。</p>  
+               
+               <p class="p">3. 根据故障诊断情况，排查线路故障和控制模块的故障。 
+                  
+                  <div>
+                     <div class="wl-attention prespace postspace" data-attention-type="caution" id="d48379e1107">
+                        <header>
+                           <h2>注意</h2>
+                        </header>
+                        <div class="attention-text postspace-s wl-attention-content">模块内部短路也会引起此故障。</div>
+                     </div>
+                     
+                  </div> 
+                  
+               </p> 
+               
+            </div>
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="系统功能原理介绍"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>系统功能原理介绍</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576501">系统功能原理介绍</h3>
+         
+         
+         <div class="body"> 
+            
+            <div class="section">
+               <h3 class="title topictitle1">前大灯控制</h3> 
+               
+               
+               <p class="p"> 
+                  <span class="ph b">近光灯控制</span> 
+                  
+               </p>  
+               
+               <p class="p">在车辆处于上电状态，中控显示屏灯光设置选择“近光灯”，则点亮近光灯。如果大灯设置选择“关闭”或车辆处于下电状态，则熄灭近光灯。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">远光灯控制</span> 
+                  
+               </p>  
+               
+               <p class="p">在车辆处于上电状态，当近光灯点亮且操作手柄开关拨到远光灯挡时，或者中控显示屏快灯光设置选择“智能远光灯”（在满足相应的环境条件后），远光灯才被点亮；当近光灯关闭或远光灯怀挡开关关闭时，远光灯才被熄灭；当远光灯开关关闭时，如果大灯设置仍为“近光灯”状态，则继续点亮近光灯。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">超车灯控制</span> 
+                  
+               </p>  
+               
+               <p class="p">在车辆处于上电状态，操作手柄开关拨到超车灯挡时，则控制远光灯点亮。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">伴我回家灯光</span> 
+                  
+               </p>  
+               
+               <p class="p">在中控显示屏灯光设置界面可设置伴我回家时间为：关闭/15s/30s/60s，当设置伴我回家的时间不为“关闭”时，整车闭锁下电后，若环境光较暗，车辆自动点亮位置灯和近光灯持续相应的15s/30s/60s时长，计时结束后自动熄灭所有灯光。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">位置灯控制</h3> 
+               
+               
+               <p class="p">在车辆处于上电状态，中控显示屏灯光设置选择“位置灯”，则点亮位置灯，如果大灯设置选择“OFF”或整车下电状态，则熄灭位置灯。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">自动灯光</h3> 
+               
+               
+               <p class="p">在车辆处于上电状态，且大灯设置为“AUTO”时，近光、位置灯在以下情况立即点亮：光照传感器输出的灯光开关请求信号状态为灯开；近光、位置灯在以下情况熄灭：光照传感器输出的灯光开关请求信号时停止近光灯继电器和位置灯继电器。</p>  
+               
+               <p class="p">当BDC收到雨量环境光传感器故障或光传感器故障或雨量环境光传感器节点丢失时，此时为光传感器故障。点亮位置灯和近光灯。BDC需要以DTC形式记录雨量环境光传感器发送的故障信息。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">制动灯控制</h3> 
+               
+               
+               <p class="p">BDC根据发来的制动灯点亮请求信号或者电子控制减速功能状态信号控制制动灯、高位制动灯点亮和熄灭。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">后雾灯</h3> 
+               
+               
+               <p class="p">在车辆处于上电状态，在近光灯点亮（非跟随回家状态）或远光灯点亮（非超车灯光）的情况下，在中控显示屏快捷设置选择“后雾灯”时，则后雾灯点亮；</p>  
+               
+               <p class="p">在位置灯熄灭或再次点击后雾灯开关（此时后雾灯开关为取消状态）、或车辆下电状态，后雾灯熄灭。</p>  
+               
+               <p class="p">后雾灯熄灭后，后雾灯开关视为取消状态。如果需要再次点亮后雾灯，需在满足后雾灯点亮的情况下再次点击后雾灯开关。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">寻车灯光</h3> 
+               
+               
+               <p class="p">如果2s 内连续按同一把遥控钥匙遥控闭锁键二次，左右转向灯被激活闪烁，同时电喇叭鸣叫两声。转向灯闪烁13次后转向灯灭掉。如果在此期间内按压解锁键或有车门打开或车辆为上电状态，左右转向灯切换到相应的闪烁功能。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">转向和危险报警灯</h3> 
+               
+               
+               <p class="p"> 
+                  <span class="ph b">左转向灯</span> 
+                  
+               </p>  
+               
+               <p class="p">车辆为上电状态时，左转向开关激活，左转向灯被激活闪烁，闪烁频率为360ms-ON/360ms-OFF；同时等频率驱动外部转向灯发声继电器。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">右转向灯</span> 
+                  
+               </p>  
+               
+               <p class="p">车辆为上电状态时，右转向开关激活，右转向灯被激活闪烁，闪烁频率为360ms-ON/360ms-OFF；同时等频率驱动外部转向灯发声继电器。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">转向灯失效检测</span> 
+                  
+               </p>  
+               
+               <p class="p">如果发生转向灯失效，故障侧的转向灯快闪。闪烁频率为160ms-ON/160ms-OFF；同时等频率驱动外部转向灯发声继电器。侧面转向灯的失效不会引起频率的改变。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">变道闪光功能</span> 
+                  
+               </p>  
+               
+               <p class="p">车辆为上电状态时，如果将转向开关（怀挡）轻拨至1挡，相应一侧的转向灯闪烁三次；同时，在灯闪烁三次期间如再有开关信号，BDC 响应新的信号。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">危险报警灯</span> 
+                  
+               </p>  
+               
+               <p class="p">如果紧急报警开关被激活，则左右转向灯均闪烁，闪烁频率为 360ms-ON/360ms-OFF；如果危险报警开关被激活后再次按压，危险报警闪烁的功能关闭。</p>  
+               
+               <p class="p">激活紧急报警信号不受电源挡位控制。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">紧急制动报警</span> 
+                  
+               </p>  
+               
+               <p class="p">紧急制动报警功能定义：（该功能出厂时默认开启，可以通过诊断仪售后开启）</p>  
+               
+               <ol class="num"> 
+                  
+                  <li> 
+                     
+                     <p>功能激活</p>  
+                     
+                     <p>在车速大于 96Km/h 小于等于160km/h 时，以1 秒为间隔采集车速来计算减速度，如果减速度大于或等于6m/s²(可设置),则激活紧急制动报警功能，车辆转向灯以160ms-ON/160ms-OFF的频率闪烁；</p>  
+                     
+                     <p>在车速大于160km/h 时，以1 秒为间隔采集车速来计算减速度，如果减速度大于或等于5m/s²(可设置),则激活紧急制动报警功能，车辆转向灯以160ms-ON/160ms-OFF的频率闪烁。</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>功能取消（两种方式）</p>  
+                     
+                     <p>1）在该功能激活后，以1 秒为间隔采集车速来计算减速度，如果减速度小于2.5m/s² (可设置)则停止紧急制动报警功能；</p>  
+                     
+                     <p>2）在该功能激活后，通过按压紧急报警开关可停止紧急制动报警功能，此时转向灯转换为以紧急报警功能定义的频率闪烁</p> 
+                     
+                  </li> 
+                  
+               </ol>  
+               
+               <p class="p"> 
+                  <span class="ph b">碰撞报警</span> 
+                  
+               </p>  
+               
+               <p class="p">当有碰撞信号（总线或硬线）时，也要激活危险报警灯，在信号激活 4 秒之后按紧急报警开关，终止危险报警灯。</p>  
+               
+               <p class="p"> 
+                  <span class="ph b">转向灯激活优先级</span> 
+                  
+               </p>  
+               
+               <ol class="num"> 
+                  
+                  <li> 
+                     
+                     <p>车辆为上电状态时，如果先激活紧急报警开关，再激活左或右转向灯开关，则转向信号优先；如果先激活左或右转向灯开关，再激活紧急报警开关，则紧急报警信号优先。</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>当激活左/或右变道闪光功能时，如又激活紧急报警开关，则报警信号优先，并报警信号取消后，也不继续三次闪烁功能，直到再有激活信号。</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>当激活左/或右变道闪光功能时，如又激活右或左转向开关，则转向信号优先，并在1秒钟内取消左和右变道闪光功能，视所有100ms&lt;t&lt;700ms 的转向灯开关信号作为普通转向开关信号。</p> 
+                     
+                  </li> 
+                  
+               </ol>  
+               
+               <p class="p">除以上三种情况外，转向灯信号的优先级如下：</p>  
+               
+               <ol class="num"> 
+                  
+                  <li> 
+                     
+                     <p>防盗报警；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>紧急报警；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>转向信号；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>解锁/闭锁信号；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>中控模式变化反馈信号；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>服务模式（学习钥匙等）</p> 
+                     
+                  </li> 
+                  
+               </ol>  
+               
+               <p class="p">各转向灯信号的频率均为360ms-ON/360ms-OFF，占空比为50%。</p>  
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <thead style="font-weight: bold"> 
+                     
+                     <tr> 
+                        
+                        <th width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>功能</p> 
+                           
+                        </th>  
+                        
+                        <th width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>频率</p> 
+                           
+                        </th>  
+                        
+                        <th width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>优先级</p> 
+                           
+                        </th>  
+                        
+                        <th width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>时间</p> 
+                           
+                        </th>  
+                        
+                        <th width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>占空比</p> 
+                           
+                        </th> 
+                        
+                     </tr> 
+                     
+                  </thead>  
+                  
+                  <tbody> 
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>退出防盗提示</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>10</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4次</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>寻车灯光</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>9</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>10秒</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>闭锁提示</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>8</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2次</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>解锁提示</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>7</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1次</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>电池电量低报警</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>6</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>9次</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>转向灯</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>5</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>撞车紧急报警</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>4</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>刹车紧急报警</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>3</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>紧急报警开关</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          ">&nbsp;</td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr> 
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>防盗报警</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>360ms-ON/360ms-OFF</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>5分钟</p> 
+                           
+                        </td>  
+                        
+                        <td width="20%" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>50%</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">顶灯</h3> 
+               
+               
+               <p class="p"> 
+                  <span class="ph b">顶灯渐亮</span> 
+                  
+               </p>  
+               
+               <p class="p">如果顶灯处于DOOR挡，在以下任意条件下，顶灯在1秒内被线性点亮。</p>  
+               
+               <ol class="num"> 
+                  
+                  <li> 
+                     
+                     <p>任意一个车门被打开（包括背门）；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>车辆下电后，车门完成解锁；</p> 
+                     
+                  </li> 
+                  
+               </ol>  
+               
+               <p class="p"> 
+                  <span class="ph b">顶灯渐灭</span> 
+                  
+               </p>  
+               
+               <p class="p">顶灯处于DOOR挡在以下任意条件下，顶灯在1内线性熄灭。</p>  
+               
+               <ol class="num"> 
+                  
+                  <li> 
+                     
+                     <p>在没有中控闭锁的情况下，所有车门（包括背门）关闭25秒后。若在此时间内关闭DOOR挡，顶灯立即熄灭，再打开DOOR挡，顶灯立即点亮；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>电源挡位为下电状态，所有车门（包括背门）关闭并完成闭锁；</p> 
+                     
+                  </li>  
+                  
+                  <li> 
+                     
+                     <p>所有车门关闭并且电源挡位处于READY状态。</p> 
+                     
+                  </li> 
+                  
+               </ol>  
+               
+               <p class="p">支持通过语音命令来控制前排（或后排）阅读灯。在车内说“小安，你好，打开前阅读灯（或后阅读灯/左后阅读灯/右后阅读灯）”即可点亮前排（或后排）阅读灯；说“小安，你好，关闭前阅读灯（或后阅读灯/左后阅读灯/右后阅读灯）”即可关闭前排（或后排）阅读灯。</p> 
+               
+            </div>
+            
+            
+            <div class="section">
+               <h3 class="title topictitle1">行李箱灯</h3> 
+               
+               
+               <p class="p">车辆属于任意上下电状态时，打开行李箱，行李箱灯点亮。</p> 
+               
+            </div>
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

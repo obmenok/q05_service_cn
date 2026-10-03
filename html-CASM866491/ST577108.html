@@ -1,0 +1,82 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="标定方法"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>标定方法</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST577108">标定方法</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">EPS下线配置、角度中位标定流程如下图所示：</p>  
+            
+            <div class="imagecenter"><img width="" src="image/MP382848.jpg" alt="MP382848"></img></div>  
+            
+            <div>
+               <div class="wl-attention prespace postspace" data-attention-type="caution" id="d85723e18">
+                  <header>
+                     <h2>注意</h2>
+                  </header>
+                  <div class="attention-text postspace-s wl-attention-content"> 
+                     
+                     <p class="p">1、本车型集成转角传感器（SAS）零件在EPS内部，ESC/ESP/ACC/倒车影像等系统使用的方向盘转角信号由EPS系统提供，因此若上述系统报出“转向角传感器未标定”等与转角传感器相关故障时，需检查EPS系统是否正常，并重新进行EPS转角中位标定。</p>  
+                     
+                     <p class="p">2、针对重新更换EPS，标定流程选择特殊功能进行中位标定、末端保护学习流程及配置字操作步骤；针对未更换EPS，但涉及EPS角度传感器中位或方向盘中位重新修正的情况，需要进入EPS诊断仪特殊功能，先清除中位、再选择中位标定，最后进行末端保护学习操作；操作后均需对EPS系统进行清故障、读故障动作确认系统无故障。</p>  
+                     
+                     <p class="p">3、重新进行EPS角度中位标定后，需要对末端保护进行学习，具体学习方法为：方向盘从中间位置转到左极限位置，保持时间≥1S、手力≥6Nm；然后方向盘转到右极限，保持时间≥1S、手力≥6Nm；最后方向盘回正。</p>  
+                     
+                     <p class="p">4、在系统无故障状态下，需对EPS做完配置字、角度中位标定及末端保护学习后，EPS故障灯才能熄灭；检查确认故障灯熄灭后用诊断仪对EPS及相关零件进行清除历史故障码。</p> 
+                     
+                  </div>
+               </div>
+               
+            </div> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

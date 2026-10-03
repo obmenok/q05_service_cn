@@ -1,0 +1,107 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="系统功能原理介绍"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>系统功能原理介绍</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576299">系统功能原理介绍</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p"></p>  
+            
+            <p class="p"> 
+               <span class="ph b">集成制动控制模块IBCU概述</span> 
+               
+            </p>  
+            
+            <p class="p">集成制动控制模块集成了ABS/ESC/EBD/TCS/HBA/HHC/AUTOHOLD/CST/电助力/RBS等相关功能。</p>  
+            
+            <p class="p">1、制动防抱死功能（ABS）、电子制动力分配系统（EBD）</p>  
+            
+            <p class="p">防抱死制动系统（ABS）是一种电子制动控制系统，可以防止车轮抱死，可缩短刹车距离，并提高制动时的稳定性。该系统在基本制动的基础上增加了电子液压控制单元和轮速传感器，每个车轮配有独立回路的液压系统；电子控制单元采集四个车轮的转速信号，通过液压控制单元调节制动过程的制动压力，达到防止车轮抱死的目的。在
+               ABS 不起作用时，电子制动力分配系统（EBD）仍可调节后轮制动力，保证后轮不会先于前轮抱死，以保证车辆的安全。当 ABS 或 EBD 出现故障时，电子液压控制单元会通知仪表点亮相应的指示灯。
+            </p>  
+            
+            <p class="p">2、牵引力控制（TCS）：</p>  
+            
+            <p class="p">TCS是一种通过对车辆制动力及发动机系统的干预，控制车辆的动态性能，提高车辆行驶工况下的操纵性能，防止车辆在大的驱动扭矩（当达到附着力极限）时，驱动轮（至少一个驱动轮）产生不可接受的滑移（空转），以避免汽车牵引力和行驶稳定性下降的控制系统。</p>  
+            
+            <p class="p">3、车身稳定控制（ESC）：</p>  
+            
+            <p class="p">通过方向盘转角信号判断驾驶员的驾驶意图，通过四个轮速传感器，以及集成在ESC内部的侧向加速度传感器、横摆角速度传感器得知目前的车辆运动状态，将两种状态进行对比，如果实际运动状态不符合驾驶员的驾驶意图，则通过对某一个（或两个）特定的车轮进行单独制动，给整车施加一个纠正扭矩，使车辆回到驾驶员需要的驾驶状态。</p>  
+            
+            <p class="p">4、电子拖滞力控制（EDC）：</p>  
+            
+            <p class="p">在某些工况下，当发动机扭矩输出大于车辆需要的力时，过大的扭矩会给车辆运动状态控制带来不便，此时ESC通过CAN通讯系统，通知发动机减低扭矩。</p>  
+            
+            <p class="p">5、液压制动辅助（HBA）：</p>  
+            
+            <p class="p">紧急制动辅助功能是在紧急制动的情况下，驾驶员快速踩下制动踏板，但往往由于踩制动踏板的力度不足或行程不够而未达到车辆最大可能的减速度。HBA的功能就是在这种情况下通过ESC/EPBi电磁阀/马达的主动建压，为驾驶员提供额外的制动力和减速度，从而达到缩短制动距离减少事故损失的目的。</p>  
+            
+            <p class="p">6、坡起辅助功能（HHC）：</p>  
+            
+            <p class="p">在驾驶员踩下制动踏板后，集成制动控制模块通过检测坡度信号， 若满足条件，集成制动控制模块保持制动系统压力，即使此时驾驶员松开制动踏板，约2秒车辆也不会溜坡，用于辅助驾驶员坡道起步，减少溜坡风险。</p>  
+            
+            <p class="p">7、自动驻车（AUTOHOLD）</p>  
+            
+            <p class="p">踩制动踏板停车后，可以松开制动踏板，自动驻车，有工作时间限制，需要与EPB配合使用。</p>  
+            
+            <p class="p">8、舒适停车（CST）</p>  
+            
+            <p class="p">功能开启后，可提升制动停车时的乘坐舒适性。注意：舒适停车可能会使制动距离稍长，请注意提前减速及保持车距。</p>  
+            
+            <p class="p">9、陡坡缓降（HDC）</p>  
+            
+            <p class="p">陡坡缓降HDC功能是一个在车辆处于“下陡坡”的状态下，通过制动系统自动干预，帮助驾驶员控制车辆下坡行驶速度的舒适、便利的功能。 HDC可以通过大屏软开关打开或关闭该功能。</p>  
+            
+            <p class="p">10、能量回收（RBS）</p>  
+            
+            <p class="p">制动能量回收功能可通过协调电制动和液压制动，并优先使用电机的制动力，在不牺牲制动性能的前提下，提升车辆的续航里程。</p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

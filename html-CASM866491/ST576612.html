@@ -1,0 +1,169 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) 版权 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="系统功能原理介绍"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <meta name="DC.Language" content="zh-CN"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>系统功能原理介绍</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST576612">系统功能原理介绍</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">驾驶员车门内侧设有全车车窗升降器按钮，其他车门上的按钮则控制相应的车窗。车窗升降开关按键存在五个档位，默认保持在中间档位，往上拨一档为手动上升，上拨两档为自动上升，下拨一档为手动下降，下拨两档为自动下降。下图⑤、②、④、③号按钮分别对应主驾、副驾、左后、右后车窗，⑥/⑦号按钮是中控门锁按钮，控制四门闭锁/解锁，①号按钮是车窗锁按钮，上锁后除主驾的开关能控制四门车窗外其他门车窗开关禁止使用。</p>  
+            
+            <div class="imagecenter"><img width="50%" src="image/MP432567.jpg" alt="MP432567"></img></div>  
+            
+            <p class="p">车窗控制系统各控制器定义：</p>  
+            
+            <p class="p"> 
+               
+               
+               <table width="100%" border="1" frame="box" rules="all">  
+                  
+                  
+                  
+                  
+                  <tbody> 
+                     
+                     <tr align="center" valign="middle"> 
+                        
+                        <td width="33.33333333333333%" align="center" valign="middle"> 
+                           
+                           <p> 
+                              <span class="ph b">序号</span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" align="center" valign="middle"> 
+                           
+                           <p> 
+                              <span class="ph b">控制器</span> 
+                              
+                           </p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" align="center" valign="middle"> 
+                           
+                           <p> 
+                              <span class="ph b">概要</span> 
+                              
+                           </p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr align="center" valign="middle"> 
+                        
+                        <td width="33.33333333333333%" align="center" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" align="center" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>BCM/BDC</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" align="center" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1. 接收控制命令，执行中控锁解闭锁、车窗升降、儿童锁；</p>  
+                           
+                           <p>2.根据执行情况，反馈解闭锁执行状态并请求车窗开关点亮中控锁指示灯、锁窗执行状态请求车窗开关点亮锁窗指示灯；</p>  
+                           
+                           <p>3.BDC根据前置条件发送背景光亮度到车窗开关模块点亮背景光灯</p> 
+                           
+                        </td> 
+                        
+                     </tr>  
+                     
+                     <tr align="center" valign="middle"> 
+                        
+                        <td width="33.33333333333333%" align="center" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>2</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" align="center" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>DWS</p> 
+                           
+                        </td>  
+                        
+                        <td width="33.33333333333333%" align="center" valign="&#xA;            top&#xA;          "> 
+                           
+                           <p>1. 根据按键状态，发送中控锁、车窗升降、锁窗信号到BDC；</p>  
+                           
+                           <p>2. 根据BDC执行状态，发送指示灯点亮请求，DWS点亮对应指示灯</p> 
+                           
+                        </td> 
+                        
+                     </tr> 
+                     
+                  </tbody> 
+                  
+               </table> 
+               
+               
+            </p>  
+            
+            <p class="p">架构图：</p>  
+            
+            <p class="p"> 
+               <img src="image/MP425184.png"></img> 
+               
+            </p> 
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>

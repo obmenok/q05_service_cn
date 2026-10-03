@@ -1,0 +1,315 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+   
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+      
+      <meta name="copyright" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.rights.owner" content="(C) Copyright 2005"></meta>
+      
+      <meta name="DC.Type" content="topic"></meta>
+      
+      <meta name="DC.Title" content="仪表"></meta>
+      
+      <meta name="DC.Format" content="XHTML"></meta>
+      
+      <meta name="DC.Identifier" content="topic-1-F5240221"></meta>
+      
+      <link rel="stylesheet" type="text/css" href="htmlCustom.css"></link>
+      <script type="text/javascript" src="../basefiles/js/custom.js"></script><script type="text/javascript" src="basefiles/js/custom.js"></script><title>仪表</title>
+      <script type="text/javascript" src="basefiles/js/dtc-step.js"></script>
+      <script type="text/javascript" src="basefiles/js/svg_topics.js"></script>
+      <script type="text/javascript">
+        function toggleImage(el) {
+            if(el.className=="thumb"){
+                el.className="full";
+            } else {
+                el.className="thumb";
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="basefiles/style/svg-topics.css"></link>
+      
+      <link rel="stylesheet" type="text/css" href="basefiles/style/dtc-style.css"></link>
+      
+   </head>
+   
+   <body onload="custTopic()">
+      <section id="topic-1-F5240221">
+         
+         
+         
+         <h3 class="title topictitle1" title="ST594179">仪表</h3>
+         
+         
+         <div class="body"> 
+            
+            <p class="p">1、液晶仪表</p>  
+            
+            <p class="p">液晶仪表屏不涉及整车故障码记录</p>  
+            
+            <p class="p">2、段码仪表</p>  
+            
+            
+            <table width="100%" border="1" frame="box" rules="all">  
+               
+               
+               
+               
+               
+               
+               <tbody> 
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">故障代码</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">含义</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">触发条件</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">故障码恢复条件</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">故障码删除条件</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">910517</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">电池电压小于阀值</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">检测电源电压低于8.3V持续时间500ms</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">电压高于9.5V持续500ms</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">910617</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">电池电压超出阀值</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">检测电源电压高于17V持续时间500ms</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">电压低于15.5V持续500ms</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">910762</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">硬线点火信号和CAN信号不同</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、唤醒周期内 &amp;&amp;2、点火硬线信号不等于点火CAN信号（0x28B BCM_PowerStatusFeedback）,持续时间大于等于1s</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">点火硬线信号等于点火CAN信号</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D0A187</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">InfoCAN接口Bus-off</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、整车电源6.5V-18V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、检测到CAN总线进入BUSOFF状态,且BUS-OFF Counter&gt;=5</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">BUSOFF消失，总线恢复正常</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D08087</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与BCM_28B通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x28B报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x28B正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D08287</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与HU_516通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x516报文丢失大于5s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x516正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D08B87</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与PCU_33B通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x33B报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x33B正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D08C87</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与BMS_34C通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x34C报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x34C正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D08E87</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与PDC/PDCU_331通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x331报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x331正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D09087</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与IMS_365通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x365报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x365正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D09187</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与IBCU/EPBi/ESP_17A通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x17A报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x17A正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D09287</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与EPS_24F通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x24F报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x24F正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D09387</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与SRS_50通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x50报文丢失大于2.5s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x50正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D09687</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与ACC/LAS/FC/ADC/FR_244通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x244报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x244正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D09887</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与LCDAL_ 2AD通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x2AD报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x2AD正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr>  
+                  
+                  <tr> 
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">D09987</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">与LCDAR_ 2A4 通讯丢失</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、工作电压9V-16V &amp;&amp;2、电源档位为ON档3S后 &amp;&amp;3、发动机运行状态不为Crank &amp;&amp;4、总线处于非BUSOFF状态或总线BUSOFF恢复1S后 &amp;&amp;5、0x2A4报文丢失大于1s以上条件满足则该DTC被触发。</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1. 工作电压9-16V；2. 接收到1帧 0x2A4正常报文</td>  
+                     
+                     <td width="20%" valign="&#xA;            top&#xA;          ">1、故障恢复后经过40次Key off 到 Key on 循环；2、或者$14诊断指令清除</td> 
+                     
+                  </tr> 
+                  
+               </tbody> 
+               
+            </table> 
+            
+            
+         </div>
+         
+         
+         
+      </section>
+   </body>
+   
+</html>
